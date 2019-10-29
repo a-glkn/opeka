@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Опека</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+
+	<!-- Шрифт скопирован с сайта -->
+	<style type="text/css">
+		@font-face { 
+			font-family: 'core_sans_ds35_regular'; src: url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.eot'); src: url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.woff2') format('woff2'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.woff') format('woff'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.ttf') format('truetype'); font-weight: normal; font-style: normal;
+		}
+	</style>
+
+
+	<!-- стили с сайта, ресет+сетка -->
+	<style type="text/css">hr,img,legend{border:0}legend,td,th{padding:0}body,figure{margin:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;color:#337ab7;text-decoration:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}.img-thumbnail,body{background-color:#fff}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{vertical-align:middle}svg:not(:root){overflow:hidden}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-size:14px;line-height:1.42857143;color:#333}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}.container,.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}[role=button]{cursor:pointer}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-left:-15px;margin-right:-15px}.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{content:" ";display:table}.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.affix{position:fixed}@-ms-viewport{width:device-width}@media (max-width:767px){.visible-xs{display:block!important}table.visible-xs{display:table!important}tr.visible-xs{display:table-row!important}td.visible-xs,th.visible-xs{display:table-cell!important}.visible-xs-block{display:block!important}.visible-xs-inline{display:inline!important}.visible-xs-inline-block{display:inline-block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}table.visible-sm{display:table!important}tr.visible-sm{display:table-row!important}td.visible-sm,th.visible-sm{display:table-cell!important}.visible-sm-block{display:block!important}.visible-sm-inline{display:inline!important}.visible-sm-inline-block{display:inline-block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}table.visible-md{display:table!important}tr.visible-md{display:table-row!important}td.visible-md,th.visible-md{display:table-cell!important}.visible-md-block{display:block!important}.visible-md-inline{display:inline!important}.visible-md-inline-block{display:inline-block!important}}@media (min-width:1200px){.visible-lg{display:block!important}table.visible-lg{display:table!important}tr.visible-lg{display:table-row!important}td.visible-lg,th.visible-lg{display:table-cell!important}.visible-lg-block{display:block!important}.visible-lg-inline{display:inline!important}.visible-lg-inline-block{display:inline-block!important}.hidden-lg{display:none!important}}@media (max-width:767px){.hidden-xs{display:none!important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}.visible-print{display:none!important}@media print{.visible-print{display:block!important}table.visible-print{display:table!important}tr.visible-print{display:table-row!important}td.visible-print,th.visible-print{display:table-cell!important}}.visible-print-block{display:none!important}@media print{.visible-print-block{display:block!important}}.visible-print-inline{display:none!important}@media print{.visible-print-inline{display:inline!important}}.visible-print-inline-block{display:none!important}@media print{.visible-print-inline-block{display:inline-block!important}.hidden-print{display:none!important}}</style>
+
+
+	<!-- Глобально прописал шрифт, на сайте он итак прописан глобально  -->
+	<style>
+		body{
+			font-family: core_sans_ds35_regular;
+		}
+	</style>
+
+
+	<!-- Базовые стили Slick-слайдера, на сайте они уже подключены -->
+	<style>
+		/* Slider */
+		.slick-slider
+		{
+			position: relative;
+
+			display: block;
+			box-sizing: border-box;
+
+			-webkit-user-select: none;
+			-moz-user-select: none;
+				-ms-user-select: none;
+					user-select: none;
+
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+				touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		.slick-list
+		{
+			position: relative;
+
+			display: block;
+			overflow: hidden;
+
+			margin: 0;
+			padding: 0;
+		}
+		.slick-list:focus
+		{
+			outline: none;
+		}
+		.slick-list.dragging
+		{
+			cursor: pointer;
+			cursor: hand;
+		}
+
+		.slick-slider .slick-track,
+		.slick-slider .slick-list
+		{
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				-o-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+		}
+
+		.slick-track
+		{
+			position: relative;
+			top: 0;
+			left: 0;
+
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.slick-track:before,
+		.slick-track:after
+		{
+			display: table;
+
+			content: '';
+		}
+		.slick-track:after
+		{
+			clear: both;
+		}
+		.slick-loading .slick-track
+		{
+			visibility: hidden;
+		}
+
+		.slick-slide
+		{
+			display: none;
+			float: left;
+
+			height: 100%;
+			min-height: 1px;
+		}
+		[dir='rtl'] .slick-slide
+		{
+			float: right;
+		}
+		.slick-slide img
+		{
+			display: block;
+		}
+		.slick-slide.slick-loading img
+		{
+			display: none;
+		}
+		.slick-slide.dragging img
+		{
+			pointer-events: none;
+		}
+		.slick-initialized .slick-slide
+		{
+			display: block;
+		}
+		.slick-loading .slick-slide
+		{
+			visibility: hidden;
+		}
+		.slick-vertical .slick-slide
+		{
+			display: block;
+
+			height: auto;
+
+			border: 1px solid transparent;
+		}
+		.slick-arrow.slick-hidden {
+			display: none;
+		}
+	</style>
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+	<div class="page-navigation">
+		<div class="page-navigation__item active"><a href="#pension-intro">Пансионат</a></div>
+		<div class="page-navigation__item"><a href="#pension-features">О пансионате</a></div>
+		<div class="page-navigation__item"><a href="#pension-gallery">Фотогалерея</a></div>
+		<div class="page-navigation__item"><a href="#pension-prices">Цены на проживание</a></div>
+		<div class="page-navigation__item"><a href="#pension-contacts">Контакты</a></div>
+	</div>
+
+	<section id="pension-intro" class="section section_intro section_intro_pension inverted bg-cover bg-overlay full-screen-height-adjustment" style="background-image: url(../img/bg-intro.jpg);">
+		
+		<div class="section__inner">
+			<div class="container">
+				<div class="heading heading_sm tt-u text-highlighted">город: Санкт-Петербург</div>
+				<div class="heading heading_lg text-shaddow">Сэкономьте до 90% стоимости по Госпрограмме</div>
+
+				<div class="text-blue text_info-icon">
+					<svg class="icon">
+						<use xlink:href="img/sprite.svg#info"></use>
+					</svg>
+					<span>по закону 442-Ф3 от 28 декабря 2013г.</span>
+				</div>
+
+				<a href="#" class="link link_arr-right">Посмотреть фотогалерею</a>
+			</div>
+		</div>	
+
+		<div class="tags-list-wrapper">
+			<div class="container">
+				<div class="tags-list">
+					<div class="tags-list__item">
+						Есть места
+					</div>
+
+					<div class="tags-list__item">
+						Новый пансионат
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section_features section_features_pension">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col">
+					<div class="icon-feature">
+						<div class="icon">
+							<svg>
+								<use xlink:href="img/sprite.svg#geo"></use>
+							</svg>
+						</div>
+					
+						<div class="icon-feature__inner">
+							Улица 2я Фрезерная д. 4 
+							<div><a href="#">Смотреть на карте</a></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 col">
+					<div class="icon-feature">
+						<div class="icon">
+							<svg>
+								<use xlink:href="img/sprite.svg#chair"></use>
+							</svg>
+						</div>
+
+						<div class="icon-feature__inner">
+							От 2100 руб./сут.
+							<div><a href="#">Подробнее</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="pension-features" class="section pt pb">
+		<div class="container">
+			<div class="heading heading_md">О пансионате</div>
+
+			<p>«ОПЕКА Перовский» - пансионат комфорт-класса находится на исторической территории бывшего московского пригорода Перово, ныне Юго-Восточного административного округа города, недалеко от знаменитой усадьбы Кусково – одной из главных усадебных сокровищниц Москвы. Пансионат и сам как небольшая усадьба. Это новое трехэтажное здание с огороженной большой территорией, на которой разбит фруктовый сад и огород с грядками и теплицами. Подопечные по желанию могут принять участие в уходе за посадками. Осенью всей семьей так приятно насладиться собственными плодами яблок, слив, огурцов, и даже кабачков, которые так любят наши бабушки.
+			<br>Заботливый персонал обеспечит профессиональный уход 24 часа в сутки, а психологи – разнообразный досуг и арт-терапию в уютных гостиных. Постояльцы могут выбрать проживание как в одноместном, так и в номере на большее количество человек, а также пользоваться всей инфраструктурой пансионата. Для лежачих пациентов оборудовано специализированное отделение, обеспечивающее наилучший уход и присмотр. Возможны экскурсии и выезды в ближайшие парки и усадьбы.</p>
+		</div>
+	</section>
+
+	<section class="section section_service section_service_pension bg-grey pt pb">
+		<div class="container">
+			<div class="heading heading_md">Услуги</div>
+
+			<div class="icons-list">
+				<div class="icons-list__item">
+					<div class="icons-list__item__icon">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#time-24"></use>
+						</svg>
+					</div>
+					<div class="icons-list__item__content">
+						<div class="num">01</div>
+						Полный уход 24 часа в сутки (помощь в принятии пищи, передвижении, сопровождение на прогулки, смена памперсов, помощь в проведении гигиенических процедур)
+					</div>
+				</div>
+
+				<div class="icons-list__item">
+					<div class="icons-list__item__icon">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#invalid-chair"></use>
+						</svg>
+					</div>
+					<div class="icons-list__item__content">
+						<div class="num">02</div>
+						Предоставление в пользование специализированного оборудования (функциональные кровати, инвалидные коляски, ходунки, противопролеженевые матрацы)
+					</div>
+				</div>
+
+				<div class="icons-list__item">
+					<div class="icons-list__item__icon">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#cutlery"></use>
+						</svg>
+					</div>
+					<div class="icons-list__item__content">
+						<div class="num">03</div>
+						Сбалансированное 5-ти разовое питание с учетом рекомендаций диетолога
+					</div>
+				</div>
+
+
+				<div class="icons-list__item">
+					<div class="icons-list__item__icon">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#cutlery"></use>
+						</svg>
+					</div>
+					<div class="icons-list__item__content">
+						<div class="num">04</div>
+						Организованный досуг: проведение праздников, концерты с участием заслуженных артистов, занятия арт-терапией с дипломированными специалистами
+					</div>
+				</div>
+
+				<div class="icons-list__item">
+					<div class="icons-list__item__icon">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#bed"></use>
+						</svg>
+					</div>
+					<div class="icons-list__item__content">
+						<div class="num">05</div>
+						Смена и стирка постельного и нательного белья
+					</div>
+				</div>
+
+				<div class="icons-list__item">
+					<div class="icons-list__item__icon">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#bed"></use>
+						</svg>
+					</div>
+					<div class="icons-list__item__content">
+						<div class="num">06</div>
+						Оснащение комплекса противопожарной сигнализацией, видеонаблюдением
+					</div>
+				</div>
+			</div>
+
+			<button class="btn btn_red">Оставить заявку</button>
+		</div>
+	</section>
+
+	<section id="pension-gallery" class="section section_gallery section_gallery_pension pt pb">
+		<div class="container">
+			<div class="heading heading_md">Галерея</div>
+		</div>
+
+		<div class="tabs tabs_gallery">
+			<div class="container">
+				<div class="tabs__controls">
+					<div class="tabs__controls__item active">
+						Все фотографии
+					</div>
+	
+					<div class="tabs__controls__item">
+						Экстерьер
+					</div>
+	
+					<div class="tabs__controls__item">
+						Интерьер
+					</div>
+	
+					<div class="tabs__controls__item">
+						Номер проживающего
+					</div>
+				</div>
+			</div>
+
+
+			<div class="tabs__content">
+				<div class="tabs__content__item active">
+
+					<div class="gallery" id="gallery-1">
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-1">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+
+					</div>
+
+					<button class="btn btn_toggle" data-primary="Показать все фото" data-secondary="Свернуть" data-bound="#gallery-1">
+						Показать все фото
+					</button>
+				</div>
+
+				<div class="tabs__content__item">
+					<div class="gallery" id="gallery-2">
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-2">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+
+					</div>
+
+					<button class="btn btn_toggle" data-primary="Показать все фото" data-secondary="Свернуть" data-bound="#gallery-2">
+						Показать все фото
+					</button>
+				</div>
+
+				<div class="tabs__content__item">
+					<div class="gallery" id="gallery-3">
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-3">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+
+					</div>
+
+					<button class="btn btn_toggle" data-primary="Показать все фото" data-secondary="Свернуть" data-bound="#gallery-3">
+						Показать все фото
+					</button>
+				</div>
+
+
+				<div class="tabs__content__item">
+					<div class="gallery" id="gallery-4">
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+		
+						<div class="gallery__item not-shown">
+							<a href="#" data-fancybox="group-4">
+								<img src="img/gallery-img.jpg" alt="">
+		
+								<div class="zoom"></div>
+							</a>
+						</div>
+
+					</div>
+
+					<button class="btn btn_toggle" data-primary="Показать все фото" data-secondary="Свернуть" data-bound="#gallery-4">
+						Показать все фото
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="slider-gallery">
+			<div class="slider-gallery__item">
+				<a href="#">
+					<img src="img/gallery-img.jpg" alt="">
+				</a>
+			</div>
+			<div class="slider-gallery__item">
+				<a href="#">
+					<img src="img/gallery-img.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section_programm-desc bg-cover pt pb" style="background-image: url(img/bg-desc.jpg)">
+		<div class="container">
+			<div class="heading heading_md">Описание программ проживания</div>
+
+			<div class="heading heading_sm">В пансионате «Перовский» представлены две программы проживания для пожилого человека</div>
+
+			<div class="cards">
+				<div class="cards__item">
+					<div class="cards__icon">
+						<svg>
+							<use xlink:href="img/sprite.svg#help"></use>
+						</svg>
+					</div>
+					<div class="cards__heading text-highlighted">Нужен помощник</div>
+
+					<div class="cards__text">
+						<p>Для людей, частично утративших способность к самообслуживанию.</p>
+
+						<p>Для людей с когнитивными нарушениями (с нарушением памяти и снижением интеллекта) и нуждающихся 
+						в круглосуточном уходе (не лежачих).</p>
+					</div>
+				</div>
+
+
+				<div class="cards__item">
+					<div class="cards__icon">
+						<svg>
+							<use xlink:href="img/sprite.svg#care"></use>
+						</svg>
+					</div>
+					<div class="cards__heading text-highlighted">Полный уход</div>
+
+					<div class="cards__text">
+						<p>Для людей, полностью утративших способность 
+						к самообслуживанию и передвижению.</p>
+						
+						<p>Для людей, нуждающихся в круглосуточном уходе (лежачих).</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="pension-prices" class="section section_prices pt pb">
+		<div class="container">
+			<div class="heading heading_md">Цены на проживание</div>
+
+			<div class="table">
+				<table>
+					<tr>
+						<th>НОМЕР</th>
+						<th>НУЖЕН ПОМОЩНИК</th>
+						<th>ПОЛНЫЙ УХОД</th>
+					</tr>
+					<tr>
+						<td>Одноместный</td>
+						<td>3 500 руб./сут.</td>
+						<td>4 500 руб./сут.</td>
+					</tr>
+
+					<tr>
+						<td>Двухместный</td>
+						<td>2 500 руб./сут.</td>
+						<td>2 900 руб./сут.</td>
+					</tr>
+
+					<tr>
+						<td>Трехместный</td>
+						<td>2 200 руб./сут.</td>
+						<td>2 200 руб./сут.</td>
+					</tr>
+
+					<tr>
+						<td>5-и местный</td>
+						<td>2 100 руб./сут.</td>
+						<td>-</td>
+					</tr>
+
+					<tr>
+						<td>Отделение полного ухода</td>
+						<td>-</td>
+						<td>2 500 руб./сут.</td>
+					</tr>
+
+				</table>
+			</div>
+
+			<div class="footnote">
+				<sup>*</sup> При единовременной предварительной оплате размещения за 2 месяца (60 дней) предоставляется бонусное вознаграждение 5000,00 рублей за каждый оплаченный месяц для получения медицинских услуг в пансионате «Перовский»
+			</div>
+
+			<div class="table">
+				<table>
+					<tr>
+						<th>ВИП ПАКЕТ (ПОСМОТРЕТЬ, ЧТО ВХОДИТ В ПАКЕТ)</th>
+						<th>СТОИМОСТЬ, РУБ./СУТКИ</th>
+					</tr>
+					<tr>
+						<td>ВИП «Сиделка 12 часов»</td>
+						<td>3 500</td>
+					</tr>
+					<tr>
+						<td>ВИП «Сиделка 16 часов»</td>
+						<td>4 300</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="footnote">
+				<sup>*</sup> Окончательная стоимость ВИП размещения формируется из стоимости проживания и стоимости выбранного пакета ВИП услуг.
+			</div>
+		</div>
+	</section>
+
+	<section class="section section_capture-form pb">
+		<div class="container">
+			<form action="" class="form form_horizont form-bg pt pb" style="background-image: url(img/bg-capture.jpg)">
+				<div class="row">
+					<div class="col-md-10">
+						<div class="heading heading_md">
+							Приезжайте к нам в гости и посмотрите своими глазами
+							на жизнь , познакомьтесь с «Опекой» изнутри. <br>
+							Вы сможете прогуляться по территории, поговорить с Управляющим,
+							посмотреть и подобрать подходящую комнату.
+						</div>
+
+						<div class="heading heading_sm">Оставьте заявку на посещение понравившегося пансионата,<br> и мы перезвоним вам в ближайшее время.</div>
+
+						<div class="heading heading_sm">Или позвоните нам по телефону <a href="tel:88005555403" class="text-blue">8 (800) 555-54-03</a></div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4">
+						<input type="text" class="form__input" placeholder="Ваше имя">
+					</div>
+
+					<div class="col-md-4">
+						<input type="text" class="form__input" required placeholder="Ваш телефон">
+					</div>
+
+					<div class="col-md-4">
+						<button class="btn btn_simple">Оставить заявку</button>
+					</div>
+				</div>
+
+				<label>
+					<input type="checkbox" checked="checked"> Согласен c <a href="/politika-konfidentsialnosti/" target="_blank">политикой конфиденциальности</a>
+				</label>
+			</form>
+		</div>
+	</section>
+
+	<section class="section section_capture-btn pt pb" style="background-image: url(img/bg-capture2.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="heading heading_md">Устройте пожилого человека в пансионат с частичной оплатой от государства</div>
+
+					<div class="heading heading_sm">С 1 января 2015 года вступил в силу Федеральный закон Российской Федерации от 28 декабря 2013 г. № 442-ФЗ «Об основах социального обслуживания граждан в Российской Федерации»</div>
+					
+					<div class="heading heading_sm">Мы поможем вам со сбором документов!</div>
+		
+					<button class="btn btn_red btn_emblem">Подробнее</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="pension-contacts" class="section section_contacts">
+		<div class="container pt">
+			<div class="heading heading_md">Наши контакты</div>
+		</div>
+
+		<div class="contacts-card-wrapper">
+			<div class="container">
+				<div class="contacts-card">
+					<div class="contacts-card__heading">Пансионаты для пожилых «Опека»</div>
+					<div class="contacts-card__title">Пансионат для пожилых «Рижский»</div>
+	
+					<div class="contacts-card__element">
+						<div class="contacts-card__element__label">АДРЕС:</div>
+						<p>Санкт-Петербург, Рижский проспект, д. 41, лит. Б (заезд с Либавского пер.)</p>
+					</div>
+	
+					<div class="contacts-card__element">
+						<div class="contacts-card__element__label">ТЕЛЕФОН:</div>
+						<p><a href="tel:88005555403">8 (800) 555-54-03</a></p>
+						<p><a href="tel:88122425042">8 (812) 242-50-42</a></p>
+					</div>
+	
+					<div class="social-list">
+						<div class="social-list__item">
+							<a href="#" class="vk"></a>
+						</div>
+						<div class="social-list__item">
+							<a href="#" class="fb"></a>
+						</div>
+						<div class="social-list__item">
+							<a href="#" class="tw"></a>
+						</div>
+						<div class="social-list__item">
+							<a href="#" class="gp"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="map-container" id="map" style="background: url(img/map-sample.jpg) center no-repeat; background-size: cover;">
+
+		</div>
+	</section>
+
+	<!-- jquery с CDN -->
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+	<!-- Slick-слайдер с сайта -->
+	<script src="https://sgc-opeca.ru/local/templates/opeca/js/slick.min.js"></script>
+
+	<script src="js/scripts.min.js?v=2"></script>
+</body>
+</html>
