@@ -32,10 +32,12 @@ a.text-blue
     border: 0
     transition: .3s ease
     outline: none
-    &.btn_red
-        width: 262px
-        height: 48px
-        border-radius: 4px
+    border-radius: 4px
+    padding-left: 15px
+    padding-right: 15px
+    padding-top: 5px
+    padding-bottom: 5px
+    &.btn_primary
         border-color: #ff504c
         background-color: #ff504c
         color: #fff
@@ -44,7 +46,6 @@ a.text-blue
         outline: none
         &:hover
             box-shadow: 5px 8px 13px 0px rgba(37, 59, 81, 0.29)
-
     &.btn_toggle
         padding: 10px 40px
         color: #006699
@@ -70,15 +71,11 @@ a.text-blue
             &:before
                 transform: rotate(-135deg)
                 top: 19px
-
     &.btn_emblem
         background-image: url(../img/emblem.png)
         background-repeat: no-repeat
         background-position: right center
-
-    &.btn_simple
-        width: 262px
-        height: 48px
+    &.btn_secondary
         border-radius: 4px
         transition: .3s ease
         border: 0
@@ -90,6 +87,9 @@ a.text-blue
         outline: none
         &:hover
             box-shadow: 1px 6px 20px 3px rgba(0, 102, 153, 0.15)
+    &.btn_size-md
+        width: 262px
+        height: 48px
 
 .bg-overlay
     position: relative
@@ -119,8 +119,6 @@ a.text-blue
     &.heading_sm
         font-size: 18px
 
-.text-blue
-    color: #cbe4ef
 
 .footnote
     font-size: 16px
@@ -128,44 +126,73 @@ a.text-blue
     sup
         color: #ff504c
 
-.table
-    overflow-x: scroll
+.table-responsive
+    overflow-x: auto
     position: relative
     margin: 2em 0
-    table
-        width: 100%
-        border-left: 1px solid #f0f7fa
-        border-top: 1px solid #f0f7fa
-        overflow: hidden
-        th
-            background-color: #f0f7fa
-            color: #026698
-            border-right: 1px solid #f0f7fa
-            border-bottom: 1px solid #f0f7fa
-            font-size: 14px
-            text-align: left
-        td
-            border-right: 1px solid #f0f7fa
-            border-bottom: 1px solid #f0f7fa
-            background-color: #fff
-            color: #656565
-        td, th
-            padding-left: 20px
-            padding-right: 20px
-            padding-top: 14px
-            padding-bottom: 14px
-            font-size: 16px
+    -webkit-overflow-scrolling: touch
+    -ms-overflow-style: -ms-autohiding-scrollbar
+
+.table
+    width: 100%
+    border-left: 1px solid #f0f7fa
+    border-top: 1px solid #f0f7fa
+    overflow: hidden
+    th
+        background-color: #f0f7fa
+        color: #026698
+        border-right: 1px solid #f0f7fa
+        border-bottom: 1px solid #f0f7fa
+        font-size: 14px
+        text-align: left
+    td
+        border-right: 1px solid #f0f7fa
+        border-bottom: 1px solid #f0f7fa
+        background-color: #fff
+        color: #656565
+    td, th
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 14px
+        padding-bottom: 14px
+        font-size: 16px
 
 
 .link
     line-height: 1
     &.link_arr-right
         padding-right: 20px
-        background: url(../img/arr-right.png) right 4px no-repeat
-
+        position: relative
+        display: inline-block
+        &:before
+            content: ''
+            display: block
+            width: 8px
+            height: 1px
+            background-color: #fff
+            position: absolute
+            right: 0
+            top: 50%
+            margin-top: -1px
+            transform: rotate(45deg)
+        &:after
+            content: ''
+            display: block
+            width: 8px
+            height: 1px
+            position: absolute
+            background-color: #fff
+            right: 0
+            top: 50%
+            margin-top: 4px
+            transform: rotate(-45deg)
     &:hover
         text-decoration: underline
         color: inherit !important
+    &:active
+        color: inherit !important
+
+
 .inverted
     *
         color: #fff
@@ -185,10 +212,11 @@ a.text-blue
 .pb
     padding-bottom: 60px
 
+
 .tags-list
     display: flex
     flex-wrap: wrap
-    .tags-list__item
+    &__item
         margin-top: 10px
         text-align: center
         margin-right: 20px
@@ -222,7 +250,7 @@ a.text-blue
             right: 0
             top: 5px
             background-color: #cee4ef
-    .icon-feature__inner
+    &__inner
         font-size: 20px
         color: #000000
         margin-top: auto
@@ -242,7 +270,7 @@ a.text-blue
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    .icons-list__item
+    &__item
         display: flex
         padding-bottom: 40px
         padding-top: 40px
@@ -250,12 +278,12 @@ a.text-blue
         border-top: 1px solid #ebebeb
         &:nth-child(1), &:nth-child(2)
             border-top: 0
-        .icons-list__item__icon
+        &-icon
             margin-right: 20px
             .icon
                 width: 77px
                 height: 77px
-        .icons-list__item__content
+        &-content
             font-size: 14px
             line-height: 1.7
             color: #2a2a2a
@@ -308,15 +336,49 @@ a.text-blue
             display: inline-block
         
 
-
+.zoom-circle
+    display: inline-block
+    border-radius: 50%
+    background: #ffffff
+    width: 48px
+    height: 48px
+    color: white
+    box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.3)
+    z-index: 1
+    opacity: 0
+    font-size: 36px
+    text-decoration: none
+    color: #6f6f6f
+    text-align: center
+    line-height: 48px
+    transition: opacity 0.3s
+    &:before
+        width: 24px
+        height: 1px
+        content: ''
+        position: relative
+        background: #6f6f6f
+        display: block
+        top: 23px
+        left: 12px
+    &:after
+        width: 24px
+        height: 1px
+        content: ''
+        position: relative
+        background: #6f6f6f
+        display: block
+        top: 22px
+        left: 12px
+        transform: rotate(90deg)
+    
 .gallery
     display: flex
     flex-wrap: wrap
     padding-left: 3px
     padding-right: 3px
     text-align: center
-    
-    .gallery__item
+    &__item
         padding: 3px
         width: 25%
         &.not-shown
@@ -337,27 +399,12 @@ a.text-blue
             img
                 width: 100%
                 height: auto
-            .zoom
-                display: inline-block
-                border-radius: 50%
-                background: #ffffff
-                width: 48px
-                height: 48px
-                color: white
-                box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.3)
-                z-index: 1
-                opacity: 0
-                font-size: 36px
-                text-decoration: none
-                color: #6f6f6f
-                text-align: center
-                line-height: 48px
+            .zoom-circle
                 top: 50%
                 position: absolute
                 margin-top: -24px
                 left: 50%
                 margin-left: -24px
-                transition: opacity 0.3s
                 &:before
                     width: 24px
                     height: 1px
@@ -380,14 +427,14 @@ a.text-blue
             &:hover
                 &:before
                     opacity: .4
-                .zoom
+                .zoom-circle
                     opacity: 1
 
 
 .cards
     display: flex
     justify-content: space-between
-    .cards__item
+    &__item
         padding: 20px
         width: calc(50% - 15px)
         background-color: #fff
@@ -395,18 +442,18 @@ a.text-blue
         transition: .3s ease
         &:hover
             box-shadow: 0px 0px 10px 0px rgba(0, 102, 156, 0.15)
-    .cards__icon
+    &__icon
         width: 77px
         height: 77px
         svg
             width: 77px
             height: 77px
-    .cards__heading
+    &__heading
         font-size: 27.27px
         color: #000
         margin-top: 0.5em
         padding-bottom: 0.5em
-    .cards__text
+    &__text
         font-size: 18px
         color: #000
         line-height: 1.3333
@@ -425,31 +472,29 @@ a.text-blue
     padding: 20px
     color: #333
     line-height: 1.4285714
-    .contacts-card__heading
+    &__heading
         font-size: 17px
         line-height: 1.4285714
         padding-bottom: 0.75em
         border-bottom: 1px solid #eeeeee
-    .contacts-card__title
+    &__title
         font-size: 22px
         line-height: 1.4285714
         padding-bottom: 0.75em
         padding-top: 0.75em
         border-bottom: 1px solid #eeeeee
 
-    .contacts-card__element
+    &__element
         color: #333
         font-size: 17px
         margin: 1.5em 0
-        .contacts-card__element__label
+        &__element-label
             margin-bottom: 0.5em
             font-size: 15px
             text-transform: uppercase
             color: #333
-
         p
             margin: 0
-
         a
             color: #006699
             text-decoration: none
@@ -457,12 +502,8 @@ a.text-blue
                 color: #006699
                 text-decoration: underline
 
-    .social-list
-        position: relative
-        left: -10px
-
 .form
-    .form__input
+    &__input
         width: 100%
         height: 48px
         padding-left: 20px
@@ -476,7 +517,7 @@ a.text-blue
         transition: .3s ease
         &:focus
             border-color: #00669c
-    label
+    &__label
         color: #000
         font-size: 12px
     .btn
@@ -486,34 +527,23 @@ a.text-blue
             width: 100%
 
 
-    &.form-bg
-        background-size: cover
-        background-position: center
-        background-repeat: no-repeat
-
-
 .social-list
     text-align: left
     padding: 0
-    .social-list__item
-        display: inline-block;
+    &__item
+        display: inline-block
         a
             display: inline-block
             width: 33px
             height: 33px
-            background-image: url(../img/social_round.png)
             transition: .3s ease
-            &.vk
-                background-position: 0px 33px
-            &.fb
-                background-position: -45px 33px
-            &.tw
-                background-position: 77px 33px
-            &.gp
-                background-position: 33px 33px
-
             &:hover
                 opacity: 0.8
+
+            svg
+                width: 20px
+                height: 20px
+                fill: #006699
 
 
 
@@ -528,31 +558,54 @@ a.text-blue
 
 
 	.slick-arrow
-		cursor: pointer
-		width: 23px
-		height: 42px
-		text-indent: -9999px
-		background-image: url(../img/arrows.png)
-		background-repeat: no-repeat
-		display: inline-block
-		position: absolute
-		top: 50%
-		z-index: 10
-		background-color: transparent
-		border: 0
-		margin-top: -21px
-		outline: none
-		&.slick-prev
-			left: 15px
-			background-position: top left
-			&:hover
-				background-position: bottom left
-		&.slick-next
-			right: 15px
-			background-position: top right
-			&:hover
-				background-position: bottom right
-
+        cursor: pointer
+        width: 23px
+        height: 42px
+        text-indent: -9999px
+        display: inline-block
+        position: absolute
+        top: 50%
+        z-index: 10
+        border: 0
+        margin-top: -21px
+        outline: none
+        background: transparent
+        transition: .3s ease
+        &:before
+            content: ''
+            display: block
+            width: 1px
+            height: 25px
+            position: absolute
+            top: 0
+            background-color: #fff
+        &:after
+            content: ''
+            display: block
+            width: 1px
+            height: 25px
+            position: absolute
+            bottom: 0
+            background-color: #fff
+        &.slick-prev
+            left: 15px
+            &:before
+                left: 10px
+                transform: rotate(45deg)
+            &:after
+                left: 10px
+                transform: rotate(-45deg)
+        &.slick-next
+            right: 15px
+            &:before
+                right: 10px
+                transform: rotate(-45deg)
+            &:after
+                right: 10px
+                transform: rotate(45deg)
+		
+        &:hover
+            opacity: .8
 
 .page-navigation
     position: fixed
