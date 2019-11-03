@@ -3,6 +3,28 @@
 	background-repeat: no-repeat
 	background-position: center
 
+
+.inverted
+    *
+        color: #fff
+
+    .text-highlighted
+        &:after
+            background-color: #fff
+.mt-1
+    margin-top: 1em
+
+.mt-2
+    margin-top: 2em
+
+.mb-1
+    margin-bottom: 1em
+.mb-2
+    margin-bottom: 2em
+
+.mx-1
+    margin: 1em 0
+
 .tt-u
     text-transform: uppercase
 
@@ -19,11 +41,23 @@
         left: 0
         background-color: #d8d8d8
     
+.text-bordered, p.text-bordered
+    padding-top: 2em
+    padding-bottom: 2em
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    border-bottom: 1px solid #ebebeb
+
+
+
 .text-blue
     color: #00669c
 
 a.text-blue
     color: #00669c
+
+.text-primary, a.text-primary
+    color: #ff504c
 
 .text-shaddow
     text-shadow: 0px 1px 3px rgba(0, 0, 0, .44)
@@ -90,7 +124,11 @@ a.text-blue
     &.btn_size-md
         width: 262px
         height: 48px
-
+    &.btn_light
+        border: 1px solid #cbe4ef
+        background-color: transparent
+        font-size: 19px
+        color: #fff
 .bg-overlay
     position: relative
     &:after
@@ -193,10 +231,6 @@ a.text-blue
         color: inherit !important
 
 
-.inverted
-    *
-        color: #fff
-
 .section
     font-size: 22px
     line-height: 1.2727
@@ -204,7 +238,21 @@ a.text-blue
         margin: 1em 0
         &:last-of-type
             margin-bottom: 0
+    img
+        max-width: 100%
+        height: auto
+    hr
+        border-color: #ebebeb
+        margin-top: 4em
+        margin-bottom: 4em
+.typo
+    font-size: 16px
 
+    p.size-lg
+        font-size: 20px
+
+    p.size-md
+        font-size: 18px
 
 .pt
     padding-top: 60px
@@ -293,6 +341,15 @@ a.text-blue
                 line-height: 1
                 color: #cbe4ef
                 margin-bottom: 0.5em
+            &_md
+                font-size: 18px
+                .num
+                    margin-bottom: 0
+            &_lg
+                font-size: 22px
+                line-height: 1.27
+                .num
+                    margin-bottom: 0
 
 
 
@@ -677,3 +734,27 @@ a.text-blue
         .page-navigation__item
             a
                 opacity: 1
+
+.breadcrumb
+    margin-bottom: 10px
+    ul
+    padding: 0
+    li
+        text-transform: uppercase
+        font-size: 0.70em
+        display: inline-block
+        position: relative
+        margin-right: 10px
+        font-weight: bold
+        letter-spacing: 0.05em
+        color: #8ab4cf
+        &:last-child
+            &:after
+                display: none
+        &:after
+            content: '/'
+            position: absolute
+            color: #8ab4cf
+            display: block
+            right: -10px
+            top: 0
