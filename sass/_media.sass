@@ -2,6 +2,8 @@
     .heading
         &.heading_lg
             font-size: 40px
+        &.heading_xmd
+            font-size: 36px
 
     .section_features_pension
         margin-top: 0
@@ -28,15 +30,26 @@
     .gallery 
         &__item
             width: 33.33333%
-
+    
 @media (max-width: 991px)
+    .typo 
+        p.size-xlg
+            font-size: 20px
+    .d-flex
+        display: block
     .pt
         padding-top: 50px
     .pb
         padding-bottom: 50px
+    .pt-lg
+        padding-top: 70px
+    .pb-lg
+        padding-bottom: 70px
     .heading
         &.heading_lg
             font-size: 36px
+        &.heading_xmd
+            font-size: 30px
         &.heading_md
             font-size: 26px
 
@@ -73,6 +86,9 @@
             width: 100%
             &:nth-child(2)
                 border-top: 1px solid #ebebeb
+            &-content
+                &_lg
+                    font-size: 18px
 
 
     .section_contacts 
@@ -101,6 +117,8 @@
     .heading
         &.heading_lg
             font-size: 32px
+        &.heading_xmd
+            font-size: 28px
         &.heading_md
             font-size: 24px
     .tabs__controls
@@ -121,7 +139,6 @@
         &__text
             font-size: 16px
 
-
     .section_gallery_pension
         .tabs_gallery
             display: none
@@ -140,6 +157,17 @@
         &__title
             font-size: 20px
 
-
     .page-navigation
         display: none
+
+
+@media (max-width: 480px)
+      .form
+        &__line
+            display: block
+            text-align: center
+            .form__input
+                border-top-right-radius: 30px
+                border-bottom-right-radius: 30px
+            .btn
+                left: 0

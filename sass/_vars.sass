@@ -3,6 +3,27 @@
 	background-repeat: no-repeat
 	background-position: center
 
+.text-center
+    text-align: center
+
+.d-flex
+    display: flex
+
+.flex-column
+    flex-direction: column
+
+.mx-auto
+    margin-top: auto
+    margin-bottom: auto
+
+.color-dark-blue
+    color: #00669b
+
+.color-grey
+    color: #2a2a2a
+
+.color-green
+    color: #91bf29
 
 .inverted
     *
@@ -11,19 +32,7 @@
     .text-highlighted
         &:after
             background-color: #fff
-.mt-1
-    margin-top: 1em
 
-.mt-2
-    margin-top: 2em
-
-.mb-1
-    margin-bottom: 1em
-.mb-2
-    margin-bottom: 2em
-
-.mx-1
-    margin: 1em 0
 
 .tt-u
     text-transform: uppercase
@@ -124,11 +133,40 @@ a.text-blue
     &.btn_size-md
         width: 262px
         height: 48px
+        &.btn_round
+            border-radius: 24px
     &.btn_light
         border: 1px solid #cbe4ef
         background-color: transparent
         font-size: 19px
         color: #fff
+    &.btn_size-lg
+        padding-left: 35px
+        padding-right: 35px
+        padding-top: 18px
+        padding-bottom: 20px
+        &.btn_round
+            border-radius: 30px
+    &.btn_light-green
+        border: 1px solid #91bf29
+        font-size: 16px
+        color: #2a2a2a
+        &:hover
+            color: #fff
+            background-color: #91bf29
+
+    &.btn_green
+        border: 1px solid #91bf29
+        font-size: 16px
+        color: #fff
+        background-color: #91bf29
+        &:hover
+            opacity: .9
+
+a.btn
+    text-decoration: none
+    display: inline-block
+
 .bg-overlay
     position: relative
     &:after
@@ -152,6 +190,8 @@ a.text-blue
     line-height: 1.2
     &.heading_lg
         font-size: 48px
+    &.heading_xmd
+        font-size: 44px
     &.heading_md
         font-size: 30px
     &.heading_sm
@@ -248,6 +288,9 @@ a.text-blue
 .typo
     font-size: 16px
 
+    p.size-xlg
+        font-size: 24px
+
     p.size-lg
         font-size: 20px
 
@@ -259,6 +302,30 @@ a.text-blue
 
 .pb
     padding-bottom: 60px
+
+.pt-lg
+    padding-top: 100px
+
+.pb-lg
+    padding-bottom: 100px
+
+
+.mt-0
+    margin-top: 0 !important
+
+.mt-1
+    margin-top: 1em
+
+.mt-2
+    margin-top: 2em
+
+.mb-1
+    margin-bottom: 1em
+.mb-2
+    margin-bottom: 2em
+
+.mx-1
+    margin: 1em 0
 
 
 .tags-list
@@ -324,6 +391,11 @@ a.text-blue
         padding-top: 40px
         width: calc(50% - 30px)
         border-top: 1px solid #ebebeb
+        &_px-sm
+            padding-top: 20px
+            padding-bottom: 20px
+        &_bd-0
+            border: 0 !important
         &:nth-child(1), &:nth-child(2)
             border-top: 0
         &-icon
@@ -572,18 +644,67 @@ a.text-blue
         outline: none
         margin-bottom: 20px
         transition: .3s ease
+        &_lg
+            height: 60px
         &:focus
             border-color: #00669c
+    &__text
+        width: 100%
+        height: 128px
+        max-width: 100%
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 15px
+        padding-bottom: 15px
+        border: 1px solid #cbe4ef
+        border-radius: 4px
+        color: #000
+        font-size: 14px
+        outline: none
+        margin-bottom: 20px
+        transition: .3s ease
+        &:focus
+            border-color: #00669c
+
+    &_round
+        .form
+            &__input, &__text
+                border-radius: 30px
+
+    &_color-blue
+        .form
+            &__input, &__text
+                border-color: #fafafa
+                &:focus
+                    border-color: #00669b
+
+    
     &__label
         color: #000
         font-size: 12px
     .btn
         margin-bottom: 20px
+
+    &__footnote
+        font-size: 14px
+        color: #2a2a2a
+    
     &.form_horizont
         .btn
             width: 100%
 
-
+    &__line
+        display: flex
+        .form__input
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+        .btn
+            width: 164px
+            min-width: 164px
+            padding-left: 0
+            padding-right: 0
+            position: relative
+            left: -24px
 .social-list
     text-align: left
     padding: 0
@@ -758,3 +879,51 @@ a.text-blue
             display: block
             right: -10px
             top: 0
+
+
+
+.pension-card
+    border: 1px solid #fafafa
+    border-radius: 28px
+    overflow: hidden
+    text-align: center
+    padding-bottom: 30px
+    transition: .3s ease
+    margin-bottom: 30px
+    &__img
+        position: relative
+        img
+            width: 100%
+        &:after
+            content: ''
+            display: block
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            height: 50%
+            background: linear-gradient(180deg, rgba(255,255,255, 0) 0%, rgba(255,255,255,1) 100%)
+    &__title
+        margin-top: -1.5em
+        z-index: 2
+        position: relative
+        font-size: 22px
+        color: #00669b
+        margin-bottom: 1em
+        padding-left: 15px
+        padding-right: 15px
+
+    &__sub-title
+        font-size: 16px
+        color: #2a2a2a
+        line-height: 1.5
+        padding-left: 15px
+        padding-right: 15px
+    .btn
+        margin-top: 1em
+
+    &:hover
+        transform: translateY(-20px)
+        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05)
+
+        
