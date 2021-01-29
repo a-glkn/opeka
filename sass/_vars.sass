@@ -33,7 +33,32 @@
         &:after
             background-color: #fff
 
+.mt-0
+    margin-top: 0
 
+
+
+.section_bg-eggs
+    background-image: url(../img/bg-eggs.png)
+    background-position: right 0
+    background-repeat: no-repeat
+
+.section_bg-eggs-2
+    background-image: url(../img/bg-eggs-2.png)
+    background-position: left 0
+    background-repeat: no-repeat
+
+.section_bg-eggs-3
+    background-image: url(../img/bg-eggs-3.png)
+    background-position: left 0
+    background-repeat: no-repeat
+
+.section_bg-eggs-4
+    background-image: url(../img/bg-eggs-4.png)
+    background-position: right 0
+    background-repeat: no-repeat
+
+    
 .tt-u
     text-transform: uppercase
 
@@ -69,7 +94,7 @@ a.text-blue
     color: #ff504c
 
 .text-shaddow
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, .44)
+    text-d: 0px 1px 3px rgba(0, 0, 0, .44)
 
 .btn
     border: 0
@@ -88,7 +113,7 @@ a.text-blue
         text-transform: none
         outline: none
         &:hover
-            box-shadow: 5px 8px 13px 0px rgba(37, 59, 81, 0.29)
+            box-d: 5px 8px 13px 0px rgba(37, 59, 81, 0.29)
     &.btn_toggle
         padding: 10px 40px
         color: #006699
@@ -129,12 +154,17 @@ a.text-blue
         background-color: #f0f7fa
         outline: none
         &:hover
-            box-shadow: 1px 6px 20px 3px rgba(0, 102, 153, 0.15)
+            box-d: 1px 6px 20px 3px rgba(0, 102, 153, 0.15)
     &.btn_size-md
         width: 262px
         height: 48px
         &.btn_round
             border-radius: 24px
+    &.btn_size-lg
+        width: 164px
+        height: 60px
+        &.btn_round
+            border-radius: 30px
     &.btn_light
         border: 1px solid #cbe4ef
         background-color: transparent
@@ -162,10 +192,52 @@ a.text-blue
         background-color: #91bf29
         &:hover
             opacity: .9
+    
+    &.btn_color-green
+        color: #91bf29
+
+    &.btn_outlined
+        border: 1px solid #f2f2f2
+        font-size: 16px
+        text-transform: uppercase
+        color: #006699
+        background-color: transparent
+        &:before
+            display: none
+
+
+    &.btn_download
+        background-color: #f0f7fa
+        border: 1px solid #cbe4ef
+        border-radius: 4px
+        font-size: 14px
+        text-transform: uppercase
+        color: #00669c
+        padding-top: 14px
+        padding-bottom: 14px
+        &:before
+            margin-right: 10px
+            content: ''
+            display: inline-block
+            width: 16px
+            height: 17px
+            position: relative
+            top: 3px
+            background-image: url(../img/down.png)
+
+    &.btn_size-h-48
+        padding-top: 0
+        padding-bottom: 0
+        padding-left: 48px
+        padding-right: 48px
+        height: 48px
 
 a.btn
     text-decoration: none
     display: inline-block
+
+a.btn_size-h-48
+    line-height: 48px
 
 .bg-overlay
     position: relative
@@ -185,6 +257,9 @@ a.btn
 
 .bg-grey
     background-color: #fafafa
+
+.bg-blue
+    background-color: #f2f7fa
     
 .heading
     line-height: 1.2
@@ -196,6 +271,34 @@ a.btn
         font-size: 30px
     &.heading_sm
         font-size: 18px
+    &.heading_high
+        position: relative
+        padding-bottom: .5em
+        &:after
+            bottom: 0
+            left: 0
+            content: ''
+            position: absolute
+            display: block
+            width: 165px
+            height: 1px
+            background-color: #cbe4ef
+.row-video
+    display: flex
+    flex-wrap: wrap
+    margin-top: 40px
+    
+
+.col
+    display: flex
+    flex-direction: column
+
+.video-desc
+    margin: auto 0
+    color: #2a2a2a
+    .heading_md
+        margin-bottom: 0.5em
+
 
 
 .footnote
@@ -270,6 +373,8 @@ a.btn
     &:active
         color: inherit !important
 
+.mb-0
+    margin-bottom: 0 !important
 
 .section
     font-size: 22px
@@ -297,6 +402,25 @@ a.btn
     p.size-md
         font-size: 18px
 
+    .list
+        margin: 0
+        padding: 0
+        &_dashed
+            list-style: none
+            li
+                margin: 1em 0
+                position: relative
+                padding-left: 30px
+                &:before
+                    content: ''
+                    width: 16px
+                    height: 1px
+                    background-color: #cbe4ef
+                    position: absolute
+                    left: 0
+                    top: calc(0.5em + 2px)
+            
+
 .pt
     padding-top: 60px
 
@@ -309,6 +433,9 @@ a.btn
 .pb-lg
     padding-bottom: 100px
 
+
+.text-grey
+    color: #656565
 
 .mt-0
     margin-top: 0 !important
@@ -323,6 +450,7 @@ a.btn
     margin-bottom: 1em
 .mb-2
     margin-bottom: 2em
+
 
 .mx-1
     margin: 1em 0
@@ -379,7 +507,24 @@ a.btn
                 text-decoration: underline
 
 
+.icon-item
+    display: flex
+    &__icon
+        width: 77px
+        height: 77px
+        .icon
+            width: 77px
+            height: 77px
+    &__text
+        margin-left: 20px
+        font-size: 18px
+        line-height: 22px
+        margin-top: auto
+        margin-bottom: auto
 
+.icon
+    &_color-green
+        fill: #9dbd3d
 
 .icons-list
     display: flex
@@ -422,6 +567,69 @@ a.btn
                 line-height: 1.27
                 .num
                     margin-bottom: 0
+
+
+
+.doc-card
+    background-color: #fff
+    text-decoration: none !important
+    display: flex
+    height: 140px
+    padding-left: 30px
+    padding-right: 30px
+    border-radius: 28px
+    margin-top: 35px
+    position: relative
+    &__inner
+        display: flex
+
+
+    &__iconned
+        display: flex
+        margin-top: auto
+        margin-bottom: auto
+        &-icon
+            width: 36px
+            height: 48px
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: 25px
+            svg
+                width: 36px
+                max-height: 48px
+
+        &-text
+            display: flex
+            font-size: 24px
+            color: #2a2a2a
+            line-height: 1.41
+            span
+                margin: auto 0
+
+    &__overlay
+        background-color: #9dbd3d
+        display: flex
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 28px
+        opacity: 0
+        transition: .3s ease
+        .doc-card
+            &__iconned
+                width: 100%
+                justify-content: center
+                &-text
+                    color: #fff
+
+    &:hover
+        .doc-card
+            &__overlay
+                opacity: 1
+
+
 
 
 
@@ -472,7 +680,7 @@ a.btn
     width: 48px
     height: 48px
     color: white
-    box-shadow: 0 3px 8px 2px rgba(0, 0, 0, 0.3)
+    box-d: 0 3px 8px 2px rgba(0, 0, 0, 0.3)
     z-index: 1
     opacity: 0
     font-size: 36px
@@ -560,6 +768,12 @@ a.btn
                     opacity: 1
 
 
+    &.gallery_three-col
+        flex-wrap: wrap
+        .gallery
+            &__item
+                padding: 12px
+                width: 33.33333%
 .cards
     display: flex
     justify-content: space-between
@@ -570,7 +784,7 @@ a.btn
         border-radius: 6px
         transition: .3s ease
         &:hover
-            box-shadow: 0px 0px 10px 0px rgba(0, 102, 156, 0.15)
+            box-d: 0px 0px 10px 0px rgba(0, 102, 156, 0.15)
     &__icon
         width: 77px
         height: 77px
@@ -631,6 +845,77 @@ a.btn
                 color: #006699
                 text-decoration: underline
 
+.pansion-block
+    background-color: #fff
+    border-radius: 28px
+    padding-left: 30px
+    padding-right: 30px
+    padding-bottom: 30px
+    padding-top: 40px
+    position: relative
+    margin-bottom: 40px
+    box-shadow: 0px 10px 30px 0px rgba(178, 208, 255, 0.75)
+    .heading
+        position: relative
+        z-index: 1
+        color: #00669b
+        margin-bottom: 0.5em
+    &__addr
+        font-size: 16px
+        color: #2a2a2a
+        line-height: 1.5
+        width: 400px
+        min-height: 124px
+        position: relative
+        z-index: 1
+    &__img
+        width: 453px
+        height: 200px
+        border-radius: 0 28px 0 0
+        overflow: hidden
+        position: absolute
+        right: 0
+        top: 0
+        &:before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+    .table-responsive
+        margin-top: 20px
+        height: auto
+        transition: .3s ease
+
+    &__btns
+        .btn
+            margin-top: 1em
+            margin-right: 20px
+
+    &_cut
+        box-shadow: none
+        .hidden-content
+            height: 230px
+            overflow: hidden
+            position: relative
+            &:after
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background: linear-gradient(0, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+
+
+
+
+
+    
 .form
     &__input
         width: 100%
@@ -682,6 +967,13 @@ a.btn
     &__label
         color: #000
         font-size: 12px
+        &_lg
+            font-size: 16px
+            color: #2a2a2a
+            span
+                display: block
+                font-size: 14px
+                color: #8a8a8a
     .btn
         margin-bottom: 20px
 
@@ -705,6 +997,79 @@ a.btn
             padding-right: 0
             position: relative
             left: -24px
+    .col-right
+        position: relative
+        padding-right: 65px
+    &__close
+        width: 37px
+        height: 37px
+        background-color: #f2f7fa
+        position: absolute
+        right: 0
+        top: 11.5px
+        border-radius: 50%
+        cursor: pointer
+        &:before
+            content: ''
+            width: 21px
+            height: 2px
+            background-color: #8a8a8a
+            border-radius: 2px
+            display: block
+            position: absolute
+            top: 18px
+            left: 8px
+            transform: rotate(45deg)
+        &:after
+            content: ''
+            width: 21px
+            height: 2px
+            background-color: #8a8a8a
+            border-radius: 2px
+            display: block
+            position: absolute
+            top: 18px
+            left: 8px
+            transform: rotate(-45deg)
+
+    &__add
+        font-size: 16px
+        color: #2a2a2a
+        position: relative
+        padding-left: 55px   
+        cursor: pointer 
+        span
+            position: absolute
+            left: 0
+            top: 50%
+            margin-top: -18.5px
+            display: inline-block
+            width: 37px
+            height: 37px
+            background-color: #91bf29
+            border-radius: 50%
+            &:before
+                content: ''
+                width: 21px
+                height: 2px
+                background-color: #fff
+                border-radius: 2px
+                display: block
+                position: absolute
+                top: 18px
+                left: 8px
+                transform: rotate(90deg)
+            &:after
+                content: ''
+                width: 21px
+                height: 2px
+                background-color: #fff
+                border-radius: 2px
+                display: block
+                position: absolute
+                top: 18px
+                left: 8px
+                transform: rotate(0)
 .social-list
     text-align: left
     padding: 0
@@ -881,6 +1246,89 @@ a.btn
             top: 0
 
 
+.quote
+    &:before
+        content: ''
+        display: block
+        background-image: url(../img/quote.png)
+        width: 120px
+        height: 84px
+        background-repeat: no-repeat
+        background-position: 0 0
+    p
+        font-size: 16px
+        line-height: 1.875
+        color: #656565
+    &__name
+        margin-top: 0.5em
+        padding-top: 0.5em
+        border-top: 1px solid #cbe4ef
+        font-size: 26px
+        color: #000000
+    &__pos
+        font-size: 18px
+        color: #656565
+        margin-top: 0.5em
+
+.simple-card
+    text-align: center
+    background-color: #fff
+    border-radius: 28px
+    padding-top: 50px
+    padding-bottom: 50px
+    padding-left: 15px
+    padding-right: 15px
+    transition: .3s ease
+    margin-top: 40px
+    &__img
+        height: 250px
+        display: flex
+        img
+            margin: auto
+    &__heading
+        color: #2a2a2a
+        font-size: 24px
+        line-height: 1.4
+        min-height: 1.4em * 3
+        margin-top: 1em
+    &__text
+        margin-top: 0.5em
+        color: #2a2a2a
+        font-size: 16px
+        line-height: 1.625
+
+    &:hover
+        transform: translateY(-20px)
+        box-d: 0px 3px 4px 0px rgba(0, 0, 0, 0.05)
+
+
+.banner
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    padding-left: 40px
+    padding-top: 35px
+    padding-bottom: 35px
+    &_title
+        font-size: 30px
+        color: #000000
+        line-height: 1.2
+
+    &_text
+        margin-top: 1em
+        font-size: 18px
+        line-height: 1.33333
+        color: #000
+
+    a
+        color: #00669c
+        font-size: 19px
+        text-decoration: none
+        
+
+.row.d-flex
+    .simple-card
+        height: 100%
 
 .pension-card
     border: 1px solid #fafafa
@@ -924,6 +1372,62 @@ a.btn
 
     &:hover
         transform: translateY(-20px)
-        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05)
+        box-d: 0px 3px 4px 0px rgba(0, 0, 0, 0.05)
 
         
+
+.custom-sel_v-2
+    width: 100% !important
+    height: 60px !important
+    background-color: #fff !important
+    border: 1px solid #2062af !important
+    border-radius: 30px !important
+
+    .cuselText
+        height: 60px !important
+        line-height: 60px !important
+        padding-left: 20px !important
+
+    .cuselFrameRight
+        width: 23px !important
+        height: 13px !important
+        right: 19px !important
+        top: 23px !important
+        background-image: url(../img/arr-down-blue.png) !important
+
+    &.cuselOpen
+        border-radius: 30px 30px 0px 0px !important
+        box-shadow: none !important
+        border-bottom: 0 !important
+        .cuselFrameRight
+            transform: rotate(180deg) !important
+       
+
+.section_num
+    .num-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &__item
+            width: calc(50% - 30px)
+            display: flex
+            margin-top: 20px
+            margin-bottom: 20px
+            &-num
+                width: 68px
+                height: 68px
+                border-radius: 50%
+                min-width: 68px
+                color: #fff
+                background-color: #cbe4ef
+                font-size: 37.35px
+                text-align: center
+                line-height: 68px
+                margin-right: 30px
+            &-text
+                margin-top: auto
+                margin-bottom: auto
+                font-size: 20px
+                color: #000
+                line-height: 1.2
+

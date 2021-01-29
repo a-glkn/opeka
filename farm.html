@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Опека</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+
+	<!-- Шрифт скопирован с сайта -->
+	<style type="text/css">
+		@font-face { 
+			font-family: 'core_sans_ds35_regular'; src: url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.eot'); src: url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.woff2') format('woff2'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.woff') format('woff'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.ttf') format('truetype'); font-weight: normal; font-style: normal;
+		}
+	</style>
+
+
+	<!-- стили с сайта, ресет+сетка -->
+	<style type="text/css">hr,img,legend{border:0}legend,td,th{padding:0}body,figure{margin:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;color:#337ab7;text-decoration:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}.img-thumbnail,body{background-color:#fff}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{vertical-align:middle}svg:not(:root){overflow:hidden}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-size:14px;line-height:1.42857143;color:#333}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}.container,.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}[role=button]{cursor:pointer}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-left:-15px;margin-right:-15px}.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{content:" ";display:table}.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.affix{position:fixed}@-ms-viewport{width:device-width}@media (max-width:767px){.visible-xs{display:block!important}table.visible-xs{display:table!important}tr.visible-xs{display:table-row!important}td.visible-xs,th.visible-xs{display:table-cell!important}.visible-xs-block{display:block!important}.visible-xs-inline{display:inline!important}.visible-xs-inline-block{display:inline-block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}table.visible-sm{display:table!important}tr.visible-sm{display:table-row!important}td.visible-sm,th.visible-sm{display:table-cell!important}.visible-sm-block{display:block!important}.visible-sm-inline{display:inline!important}.visible-sm-inline-block{display:inline-block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}table.visible-md{display:table!important}tr.visible-md{display:table-row!important}td.visible-md,th.visible-md{display:table-cell!important}.visible-md-block{display:block!important}.visible-md-inline{display:inline!important}.visible-md-inline-block{display:inline-block!important}}@media (min-width:1200px){.visible-lg{display:block!important}table.visible-lg{display:table!important}tr.visible-lg{display:table-row!important}td.visible-lg,th.visible-lg{display:table-cell!important}.visible-lg-block{display:block!important}.visible-lg-inline{display:inline!important}.visible-lg-inline-block{display:inline-block!important}.hidden-lg{display:none!important}}@media (max-width:767px){.hidden-xs{display:none!important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}.visible-print{display:none!important}@media print{.visible-print{display:block!important}table.visible-print{display:table!important}tr.visible-print{display:table-row!important}td.visible-print,th.visible-print{display:table-cell!important}}.visible-print-block{display:none!important}@media print{.visible-print-block{display:block!important}}.visible-print-inline{display:none!important}@media print{.visible-print-inline{display:inline!important}}.visible-print-inline-block{display:none!important}@media print{.visible-print-inline-block{display:inline-block!important}.hidden-print{display:none!important}}</style>
+
+
+	<!-- Глобально прописал шрифт, на сайте он итак прописан глобально  -->
+	<style>
+		body{
+			font-family: core_sans_ds35_regular;
+		}
+	</style>
+
+
+<!-- Не надо подключать -->
+	<style>
+		.text-center{text-align: center;}
+		.mt-3{margin-top: 1.5em}
+		.mt-4{margin-top: 2em}
+
+
+		.cusel:focus { outline: none;}.cusel { width: 100%; height: 40px; outline: none; display: inline-block; position: relative; cursor: pointer; font-size: 15px; background: #efefef; background-repeat: no-repeat; -webkit-border-radius: 5px; border-radius: 5px;}.cusel .cuselFrameRight { position: absolute; z-index: 2; top: 16px; right: 14px; height: 9px; width: 17px; background: url('https://sgc-opeca.ru/local/templates/opeca/img/down.png') bottom no-repeat;}.cusel.cuselOpen { -webkit-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.5); -moz-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.5); box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.5); -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;}.cusel.cuselOpen .cuselFrameRight { background-position: top;}.cusel.cost { background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/rub.png'); background-position: 11px center;}.cusel.district { background-repeat: no-repeat; background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/geo-2.png'); background-position: 12px center;}.cusel.features { background-repeat: no-repeat; background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/star.png'); background-position: 7px center;}.cusel.city { background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/icon/gray/point.png'); background-position: 11px center;}.cusel.pansion { background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/icon/gray/home_cross.png'); background-position: 11px center;}.cusel.speciality { background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/icon/gray/post.png'); background-position: 11px center;}.cusel.employment { background-image: url('https://sgc-opeca.ru/local/templates/opeca/img/icon/gray/clock.png'); background-position: 11px center;}.cuselText { height: 40px; padding: 0 40px; cursor: pointer; overflow: hidden; position: relative; z-index: 1; color: #656565; font-size: 14px; line-height: 40px; position: absolute; top: 0; left: 0;}.cusel-scroll-pane > span { display: block; cursor: pointer; white-space: nowrap; padding: 0 12px; font-size: 16px; height: 40px; line-height: 40px; zoom: 1;}.cusel-scroll-pane > span:first-child { border-bottom: 1px solid #e1e1e1; background: none!important;}.cusel-scroll-pane > span:last-child { -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;}.cusel-scroll-pane > span:hover,.cusel-scroll-pane .cuselOptHover,.cusel-scroll-wrap .cuselActive { color: #006699; background: #efefef;}.cusel-scroll-wrap .cuselActive { cursor: default;}.cusel.classDisCusel,.cusel.classDisCusel .cuselFrameRight { filter: alpha(opacity=65); opacity: .65; cursor: default;}.classDisCusel .cuselText { cursor: default;}#cuselBox { position: absolute; z-index: 9999;}.cusel-scroll-wrap { visibility: hidden; min-width: 100%; width: auto; border-top: 1px solid #f1f1f1; -webkit-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.5); -moz-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.5); box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.5);}.cusel-scroll-pane { background: #fff; -webkit-border-radius: 4px; border-radius: 4px;}.cusel-scroll-wrap .jScrollPaneContainer { position: relative; overflow: hidden; z-index: 5; border: 1px solid #999;}.cusel-scroll-wrap .jScrollPaneTrack { height: 100%; width: 7px !important; background: #ccc; position: absolute; top: 0; right: 4px;}.cusel-scroll-wrap .jScrollPaneDrag { position: absolute; background: #fff; border: 1px solid #ccc; border-radius: 4px; cursor: pointer; width: 13px !important; height: 25px !important; right: -4px;}.cusel-scroll-wrap .jScrollPaneDragTop { position: absolute; top: 0; left: 0; overflow: hidden;}.cusel-scroll-wrap .jScrollPaneDragBottom { position: absolute; bottom: 0; left: 0; overflow: hidden;}.cusel-scroll-wrap .jScrollArrowUp { position: absolute; top: 0; right: 2px; width: 26px; height: 12px; cursor: pointer; background-position: -2px -26px; overflow: hidden;}.cusel-scroll-wrap .jScrollArrowDown { width: 25px; height: 12px; position: absolute; top: auto; bottom: 0; right: 3px; cursor: pointer; background-position: -21px -26px; overflow: hidden;}
+	</style>
+
+
+	<!-- jquery с сайта --><!-- Не надо подключать -->
+	<script type="text/javascript" src="https://sgc-opeca.ru/local/templates/opeca/js/jquery-1.8.3.min.js?158114604593636"></script>
+
+	<!-- Не надо подключать -->
+	<script type="text/javascript" src="https://sgc-opeca.ru/local/templates/opeca/js/cusel.js"></script>
+
+	<!-- Не надо подключать -->
+	<script>
+		jQuery(document).ready(function($) {
+
+			var params = {
+				changedEl: ".custom-sel",
+				visRows: 10,
+				scrollArrows: true
+			}
+			cuSel(params);
+
+		});
+	</script>
+
+
+	<script>
+		jQuery(document).ready(function($) {
+
+			$('.form__add').click(function() {
+				var $form = $(this).parents('.form');
+
+				var $form_row = $('.form__positions .form__row:eq(0)', $form).clone();
+
+				$('.form__positions', $form).append($form_row);
+
+				$('.form__positions .form__row:eq(-1) .form__input_weigth', $form).val('');
+
+			});
+
+			$(document).on('click', '.form__close', function(e) {
+				var $form = $(this).parents('.form');
+				var $row = $(this).parents('.form__row');
+				
+				var len = $('.form__positions .form__row', document).length;
+
+
+				console.log(len)
+
+				if(len > 1) {
+					$row.remove();
+				}
+			});
+
+		});
+	</script>
+
+	<!-- стили для селекта -->
+	<style>
+
+		.cusel-scroll-wrap{
+			border: 1px solid #2062af !important;
+			border-top: 0 !important;
+			padding-top: 0px !important;
+			padding-bottom: 25px !important;
+			border-radius: 0 0 30px 30px !important;
+			-moz-border-radius: 0 0 30px 30px !important;
+			-webkit-border-radius: 0 0 30px 30px !important;
+			box-shadow: none !important;
+			background-color: #fff !important;
+		}
+
+		.cusel-scroll-pane > span:first-child:hover{
+			background: #efefef !important;
+		}
+
+		.cusel-scroll-pane > span:first-child{
+			border: 0 !important;
+		}
+
+		.cusel-scroll-pane > span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+
+		.cusel-scroll-pane{
+			border-radius: 0 0 30px 30px !important;
+			-moz-border-radius: 0 0 30px 30px !important;
+			-webkit-border-radius: 0 0 30px 30px !important;
+		}
+
+	</style>
+
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	
+	<section class="section section_bg-eggs pt-lg pb-lg">
+		<div class="container">
+			<div class="row d-flex">
+				<div class="col-md-6 mx-auto">
+					<div class="heading heading_xmd color-dark-blue ">Закупка фермерских продуктов</div>
+
+					<p class="size-xlg">Оставьте ваш телефон для более подробной 
+						консультации с нашим специалистом</p>
+
+					<form class="form form_round mt-1">
+
+						<div class="form__line">
+							<input type="text" class="form__input form__input_lg" placeholder="Телефон">
+					
+							<button class="btn btn_round btn_size-lg btn_green">Оставить заявку</button>
+						</div>
+					
+
+						<div class="form__footnote color-green">Нажимая на кнопку «Отправить» Вы соглашаетесь с <a href="#" class="color-green">Политикой конфиденциальности</a></div>
+
+					</form>
+
+				</div>
+
+				<div class="col-md-6 text-center hidden-xs hidden-sm">
+					<img src="img/img-farm.png" alt="Усиление мер безопасности для защиты пожилых людей от коронавируса!">
+				</div>
+			</div>
+		</div>
+			
+	</section>
+
+	<section class="section bg-blue pt pb">
+		<div class="container">
+
+			<div class="row mb-2">
+				<div class="col-md-12">
+					<div class="heading heading_xmd color-dark-blue text-center">
+						Наши пансионаты проведут закупки следующих продуктов питания у населения: 
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="pansion-block">
+						<div class="heading heading_md">Южный</div>
+
+						<div class="pansion-block__addr">
+							<div><b>Адрес:</b></div> 
+							Ленинградская область, Всеволожск, 
+							проспект Некрасова д. 2 (заезд с Колтушского шоссе)
+						</div>
+
+						<div class="pansion-block__img">
+							<img src="img/p1.jpg" alt="">
+						</div>
+
+						<div class="hidden-content">
+							<div class="table-responsive">
+								<table class="table">
+									<tr>
+										<th>Продукт</th>
+										<th>Количество</th>
+										<th>Цена</th>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											<div>Зелень свежая</div>
+											(укроп, петрушка, зеленый лук, базилик - микс)
+										</td>
+										<td>0,5 кг (каждый день)</td>
+										<td>150р. за 1 кг. </td>
+									</tr>
+	
+									<tr>
+										<td>
+											Редис свежий
+										</td>
+										<td>1,0кг (раз в неделю)</td>
+										<td>100р. за кг.</td>
+									</tr>
+	
+									<tr>
+										<td>
+											Щавель свежий
+										</td>
+										<td>2 кг (раз в неделю)</td>
+										<td>150р. за кг. </td>
+									</tr>
+	
+									
+								</table>
+							</div>
+	
+	
+							<form action="" class="form form_round">
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" class="form__input form__input_lg" placeholder="Имя">
+									</div>
+									<div class="col-md-6">
+										<input type="text" class="form__input form__input_lg" placeholder="Фамилия">
+									</div>
+	
+									<div class="col-md-6">
+										<input type="text" class="form__input form__input_lg" placeholder="Телефон">
+									</div>
+									<div class="col-md-6">
+										<input type="text" class="form__input form__input_lg" placeholder="E-mail">
+									</div>
+								</div>
+	
+	
+								<div class="form__label form__label_lg mb-1 mt-2">
+									Доставляемые продукты
+									<span>можете выбрать несколько позиций</span>
+								</div>
+	
+	
+								<div class="form__positions">
+									<div class="form__row">
+										<div class="row">
+											<div class="col-md-6">
+												
+												<select class="custom-sel custom-sel_v-2">
+													<option value="1">Продукт №1</option>
+													<option value="2">Продукт №2</option>
+													<option value="3">Продукт №3</option>
+													<option value="4">Продукт №4</option>
+													<option value="5">Продукт №5</option>
+													<option value="6">Продукт №6</option>
+													<option value="7">Продукт №7</option>
+													<option value="8">Продукт №8</option>
+												</select>
+											</div>
+		
+											<div class="col-md-2">
+												<input type="text" class="form__input form__input_lg form__input_weigth" value="" placeholder="Вес (кг)">
+											</div>
+		
+											<div class="col-md-4">
+		
+												<div class="col-right">
+													<input type="text" class="form__input form__input_lg form__input_price" disabled value="150 р. за 1 кг">
+		
+													<div class="form__close"></div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+		
+								</div>
+	
+								
+								<div class="form__add mt-2"><span></span> Добавть позицию</div>
+								
+							</form>
+						</div>
+
+					
+
+						<div class="pansion-block__btns mt-3">
+							<button class="btn btn-toggler btn_light-green btn_size-lg btn_round btn_color-green">Подробнее</button>
+							<button class="btn btn_green btn_size-lg btn_round">Позвонить</button>
+						</div>
+					</div>
+
+					<div class="pansion-block pansion-block_cut">
+						<div class="heading heading_md">Всеволожский</div>
+						
+						<div class="pansion-block__addr">
+							<div><b>Адрес:</b></div> 
+							Ленинградская область, Всеволожск, 
+							пр. Достоевского, д.56 (заезд с пр.Козлова, д.55)
+						</div>
+
+						<div class="pansion-block__img">
+							<img src="img/p2.jpg" alt="">
+						</div>
+
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<th>Продукт</th>
+									<th>Количество</th>
+									<th>Цена</th>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								
+							</table>
+						</div>
+
+						<div class="pansion-block__btns">
+							<button class="btn btn-toggler btn_light-green btn_size-lg btn_round btn_color-green">Подробнее</button>
+							<button class="btn btn_green btn_size-lg btn_round">Позвонить</button>
+						</div>
+					</div>
+
+					<div class="pansion-block pansion-block_cut">
+						<div class="heading heading_md">Европейский</div>
+
+						<div class="pansion-block__addr">
+							<div><b>Адрес:</b></div> 
+							Ленинградская область, Всеволожск, 
+							улица Бибиковская 27
+						</div>
+
+						<div class="pansion-block__img">
+							<img src="img/p3.jpg" alt="">
+						</div>
+
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<th>Продукт</th>
+									<th>Количество</th>
+									<th>Цена</th>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								
+							</table>
+						</div>
+
+						<div class="pansion-block__btns">
+							<button class="btn btn-toggler btn_light-green btn_size-lg btn_round btn_color-green">Подробнее</button>
+							<button class="btn btn_green btn_size-lg btn_round">Позвонить</button>
+						</div>
+					</div>
+
+
+					<div class="pansion-block pansion-block_cut">
+						<div class="heading heading_md">Источник</div>
+
+						<div class="pansion-block__addr">
+							<div><b>Адрес:</b></div> 
+							Санкт-Петербург, поселок Понтонный, 
+							улица Клубная д. 5А
+						</div>
+
+						<div class="pansion-block__img">
+							<img src="img/p4.jpg" alt="">
+						</div>
+
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<th>Продукт</th>
+									<th>Количество</th>
+									<th>Цена</th>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										<div>Зелень свежая</div>
+										(укроп, петрушка, зеленый лук, базилик - микс)
+									</td>
+									<td>0,5 кг (каждый день)</td>
+									<td>150р. за 1 кг. </td>
+								</tr>
+
+								<tr>
+									<td>
+										Редис свежий
+									</td>
+									<td>1,0кг (раз в неделю)</td>
+									<td>100р. за кг.</td>
+								</tr>
+
+								<tr>
+									<td>
+										Щавель свежий
+									</td>
+									<td>2 кг (раз в неделю)</td>
+									<td>150р. за кг. </td>
+								</tr>
+
+								
+							</table>
+						</div>
+
+						<div class="pansion-block__btns">
+							<button class="btn btn-toggler btn_light-green btn_size-lg btn_round btn_color-green">Подробнее</button>
+							<button class="btn btn_green btn_size-lg btn_round">Позвонить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+				
+
+		</div>
+	</section>
+
+
+	<section class="section section_bg-eggs-4 pt-lg pb-lg">
+		<div class="container">
+			<div class="row d-flex">
+
+				<div class="col-md-6 text-center ">
+					<img src="img/farm-2.png" alt="">
+				</div>
+
+				<div class="col-md-6  d-flex flex-column typo mx-auto">
+					<div class="heading heading_xmd color-dark-blue">Lorem ipsum dolor sit amet,</div>
+					<p class="size-xlg">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. 
+					</p>
+
+					<p class="size-xlg mt-0">Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section pt pb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading heading_xmd color-dark-blue">Контакты</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 typo mt-2">
+					<div class="heading heading_sm"><a href="tel:78005555403" class="color-grey">+7 (800) 555 54 03</a></div>
+					<div class="heading heading_sm"><a href="tel:74952815006" class="color-grey">+7 (495) 281 50 06</a></div>
+
+					<div class="heading heading_md mt-1"><a href="mailto:info@sgc-opeca.ru" >info@sgc-opeca.ru</a></div>
+				</div>
+
+				<div class="col-md-6 typo mt-2">
+					<form class="form form_round">
+						<div class="row">
+							<div class="col-sm-6">
+								<input type="text" class="form__input form__input_lg" placeholder="Имя">
+							</div>
+							<div class="col-sm-6">
+								<input type="text" class="form__input form__input_lg" placeholder="Фамилия">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="text" class="form__input form__input_lg" placeholder="E-mail">
+							</div>
+						</div>
+
+						<textarea placeholder="Текст" class="form__text"></textarea>
+
+						<div class="form__footnote">Нажимая на кнопку «Отправить» Вы соглашаетесь с <a href="#" class="color-green">Политикой конфиденциальности</a></div>
+						
+						<button class="btn mt-1 btn_round btn_size-lg btn_green">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Slick-слайдер с сайта -->
+	<script src="https://sgc-opeca.ru/local/templates/opeca/js/slick.min.js"></script>
+
+	<script src="js/scripts.min.js?v=2"></script>
+</body>
+</html>

@@ -1,10 +1,22 @@
 $(function() {
 
+	
+
 	$.fn.extend({
 		toggleText: function(a, b){
 			return this.text(this.text() == b ? a : b);
 		}
 	});
+
+	$('.pansion-block .btn-toggler').click(function() {
+		
+		var container = $(this).parents('.pansion-block');
+
+		container.toggleClass('pansion-block_cut');
+		$(this).toggleText('Подробнее', 'Скрыть');
+
+	});
+
 	function adjustIntroSection() {
 		$('.full-screen-height-adjustment').css('height', $(window).height() );
 	}
