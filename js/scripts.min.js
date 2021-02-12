@@ -1,6 +1,8 @@
 $(function() {
 
-	
+	$('.faq__item').on( "click", function( event ) {
+		$(this).toggleClass('active');
+	});
 
 	$.fn.extend({
 		toggleText: function(a, b){
