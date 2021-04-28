@@ -85,6 +85,8 @@
     border-bottom: 1px solid #ebebeb
 
 
+.text-dark-blue
+    color: #096899
 
 .text-blue
     color: #00669c
@@ -186,7 +188,10 @@ a.text-blue
         &:hover
             color: #fff
             background-color: #91bf29
-
+    &.btn_bg-white
+        background-color: #fff
+    &.btn_tt-none
+        text-transform: none
     &.btn_green
         border: 1px solid #91bf29
         font-size: 16px
@@ -207,6 +212,14 @@ a.text-blue
         &:before
             display: none
 
+    &.btn_outlined-2
+        border: 1px solid #f2f2f2
+        font-size: 16px
+        text-transform: uppercase
+        color: #006699
+        background-color: transparent
+        &:before
+            display: none
 
     &.btn_download
         background-color: #f0f7fa
@@ -233,6 +246,10 @@ a.text-blue
         padding-left: 48px
         padding-right: 48px
         height: 48px
+    &.btn_blue
+        font-size: 14px
+        background-color: #096899
+        color: #fff
 
 a.btn
     text-decoration: none
@@ -285,6 +302,18 @@ a.btn_size-h-48
             width: 165px
             height: 1px
             background-color: #cbe4ef
+    &.heading_high-top
+        position: relative
+        padding-top: .5em
+        &:after
+            top: 0
+            left: 0
+            content: ''
+            position: absolute
+            display: block
+            width: 165px
+            height: 1px
+            background-color: #cbe4ef
 .row-video
     display: flex
     flex-wrap: wrap
@@ -301,7 +330,18 @@ a.btn_size-h-48
     .heading_md
         margin-bottom: 0.5em
 
-
+.delivery-form
+    padding-top: 30px
+    padding-bottom: 30px
+    padding-left: 20px
+    padding-right: 20px
+    background-color: #fff
+    border: 1px solid #eaeaea
+    border-radius: 5px
+    select
+        height: 48px
+        width: 100%
+        margin-bottom: 20px
 
 .footnote
     font-size: 16px
@@ -579,7 +619,16 @@ a.btn_size-h-48
                 .num
                     margin-bottom: 0
 
-
+    &_three-cols
+        justify-content: flex-start
+        .icons-list
+            &__item
+                padding-top: 20px
+                padding-bottom: 20px
+                border: 0
+                width: 33.3333%
+                padding-left: 10px
+                padding-right: 10px
 
 .doc-card
     background-color: #fff
@@ -1500,4 +1549,54 @@ a.btn_size-h-48
                             display: none
                     &-answer
                         display: block
+
+
+.quote
+    &_v2
+        background-color: #f1f8ff
+        border-radius: 0 32px 0 32px
+        position: relative
+        font-size: 18px
+        color: #656565
+        text-align: left
+        padding-left: 25px
+        padding-right: 40px
+        padding-top: 45px
+        padding-bottom: 60px
+        font-style: italic
+        &:before
+            content: ''
+            display: block
+            background-image: url(../img/quote-2.png)
+            width: 81px
+            height: 57px
+            background-repeat: no-repeat
+            background-position: 0 0
+        &:after
+            content: ''
+            display: block
+            width: 39px
+            height: 39px
+            position: absolute
+            bottom: 0
+            right: -39px
+            background-repeat: no-repeat
+            background-image: url(../img/q.png)
+            background-position: 0 0
+
+
+.quote-author
+    font-size: 26px
+    &__name
+        font-size: 32px
+        color: #3d6394
+
+    &_v2
+        font-size: 18px 
+        color: #656565 
+        .quote-author
+            &__name
+                margin-bottom: 0.5em
+                font-size: 26px 
+                color: #000 
 
