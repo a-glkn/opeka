@@ -39,6 +39,8 @@
     margin-top: 0
 
 
+.fs-i
+    font-style: italic
 
 .section_bg-eggs
     background-image: url(../img/bg-eggs.png)
@@ -595,6 +597,10 @@ a.btn_size-h-48
             .icon
                 width: 77px
                 height: 77px
+        &-heading
+            font-size: 18px
+            color: #000
+            margin-bottom: 0.5em
         &-content
             font-size: 14px
             line-height: 1.7
@@ -618,6 +624,9 @@ a.btn_size-h-48
                 line-height: 1.27
                 .num
                     margin-bottom: 0
+
+            &_lh-1-333
+                line-height: 1.333
 
     &_three-cols
         justify-content: flex-start
@@ -1330,6 +1339,30 @@ a.btn_size-h-48
         color: #656565
         margin-top: 0.5em
 
+.section_quote-smart
+    .quote
+        position: relative
+        padding-top: 30px
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 0
+        *
+            position: relative
+            z-index: 2
+        &__name
+            border-top: 0
+            font-size: 18px
+            color: #000000
+        &__pos
+            font-size: 18px
+            color: #000000
+            margin-top: 0
+
+        
+
+
 .simple-card
     text-align: center
     background-color: #fff
@@ -1600,3 +1633,36 @@ a.btn_size-h-48
                 font-size: 26px 
                 color: #000 
 
+
+
+.tab-headers
+    display: flex
+    justify-content: space-between
+    &__item
+        padding-left: 30px
+        padding-right: 30px
+        min-height: 150px
+        display: block
+        border: 1px solid #f3f3f3
+        border-radius: 4px
+        font-size: 24px
+        line-height: 1.25
+        transition: .3s ease
+        width: calc(50% - 15px)
+        display: flex
+        cursor: pointer
+        span
+            display: flex
+            margin: auto
+        &.active
+            cursor: default
+            border-color: #00669c
+            background-color: #00669c
+            color: #fff
+
+
+.tab-contents
+    &__item
+        display: none
+        &.active
+            display: block

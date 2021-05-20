@@ -50,6 +50,16 @@ $(function() {
 		$('.tabs__content__item:eq(' + index + ')', '.tabs').addClass('active');
 	});
 
+	$('.section_tabs .tab-headers__item').on('click', function () {
+		var index = $(this).index();
+
+		$('.tab-contents__item.active', '.section_tabs').removeClass('active');
+		$('.tab-headers__item.active', '.section_tabs').removeClass('active');
+
+		$('.tab-contents__item:eq(' + index + ')', '.section_tabs').addClass('active');
+		$('.tab-headers__item:eq(' + index + ')', '.section_tabs').addClass('active');
+	});
+
 	$('.slider-gallery').slick({
 		dots: false,
 		infinite: true,
