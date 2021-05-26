@@ -146,6 +146,13 @@
         .quote
             margin-top: 20px
             padding-bottom: 40px
+
+    .stage-block
+        &__img
+            min-width: 40%
+        &__content
+            padding-top: 30px
+            padding-bottom: 30px
 @media (max-width: 767px)
     .section_job 
         p
@@ -253,8 +260,17 @@
             min-height: 0px
             &:last-child
                 margin-bottom: 0
+
+    .stage-block
+        flex-direction: column
+        &__img
+            min-width: 100%
+        &__content
+            padding-left: 25px
+            padding-right: 25px
+            padding-top: 50px
 @media (max-width: 480px)
-      .form
+    .form
         &__line
             display: block
             text-align: center
@@ -263,3 +279,6 @@
                 border-bottom-right-radius: 30px
             .btn
                 left: 0
+
+    .stage-block__param-val
+        font-size: 18px

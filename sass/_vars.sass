@@ -21,6 +21,9 @@
 .color-dark-blue
     color: #00669b
 
+.color-black
+    color: #000
+
 .color-grey
     color: #2a2a2a
 
@@ -454,6 +457,8 @@ a.btn_size-h-48
     .list
         margin: 0
         padding: 0
+        &_size-lg
+            font-size: 18px
         &_dashed
             list-style: none
             li
@@ -494,6 +499,9 @@ a.btn_size-h-48
 
 .mt-2
     margin-top: 2em
+
+.mt-4
+    margin-top: 4em
 
 .mb-1
     margin-bottom: 1em
@@ -1361,6 +1369,27 @@ a.btn_size-h-48
             margin-top: 0
 
         
+.duration
+    display: flex
+    &__label
+        font-size: 16px
+        color: #656565
+    &__val
+        color: #056697
+    &__elem
+        padding-right: 24px
+        padding-left: 24px
+        position: relative
+        border-right: 1px solid #cbe4ef
+        &:first-child
+            padding-left: 0
+        
+        &:last-child
+            border-right: 0
+         
+
+
+
 
 
 .simple-card
@@ -1666,3 +1695,38 @@ a.btn_size-h-48
         display: none
         &.active
             display: block
+
+
+.stage-block
+    font-size: 16px
+    color: #656565
+    display: flex
+    background-color: #fff
+    line-height: 1.56
+    &__img
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        min-width: 50%
+        min-height: 620px
+    &__content
+        padding-left: 25px
+        padding-right: 25px
+        padding-top: 50px
+    &__title
+        font-size: 24px
+        color: #000000
+        padding-bottom: 50px
+    &__param
+        padding-top: 32px
+        padding-bottom: 30px
+        display: flex
+        justify-content: space-between
+        border-top: 1px solid #f2f2f2
+        &-val
+            color: #056697
+            font-size: 24px
+            width: 185px
+            text-align: right
+            div
+                font-size: 16px
