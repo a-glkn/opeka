@@ -162,6 +162,30 @@
 	    .col-programm-item
             .heading
                 margin-top: 1em
+
+
+    .row.is-flex
+        display: block
+    .row.is-flex > [class*='col-']
+        display: block
+    .row.is-flex
+        display: block
+    .row.is-flex > [class*='col-']
+        display: block
+
+
+    .section_route
+        position: relative
+        .map
+            position: relative
+            width: 100%
+            height: 100%
+        .route-text
+            position: relative
+            &:after
+                display: none
+
+
 @media (max-width: 767px)
     .section_job 
         p

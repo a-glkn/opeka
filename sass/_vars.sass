@@ -27,6 +27,9 @@
 .color-black
     color: #000
 
+.color-white
+    color: #fff
+
 .color-grey
     color: #2a2a2a
 
@@ -262,6 +265,8 @@ a.text-blue
         font-size: 14px
         background-color: #096899
         color: #fff
+    &.btn_bd-blue
+        border: 1px solid #cbe4ef
 
 a.btn
     text-decoration: none
@@ -1859,3 +1864,137 @@ a.btn_size-h-48
 
         .btn
             margin-bottom: 0
+
+
+.gallery-block
+    background-color: #fff
+    border-radius: 4px
+    overflow: hidden
+    margin-top: 40px
+    height: 100%
+    &__text
+        padding-left: 30px
+        padding-right: 30px
+        padding-top: 25px
+        padding-bottom: 25px
+        &-num
+            font-size: 30px
+            color: #cbe4ef
+
+        &-title
+            margin-top: 0.25em
+            font-size: 20px
+            color: #2a2a2a
+
+.gallery-slider
+    &__item
+        img
+            width: 100%
+            height: auto
+    .slick-dots
+        padding: 0
+        margin: 0
+        display: flex
+        position: absolute
+        bottom: 20px
+        width: 100%
+        justify-content: center
+        li
+            list-style-type: none
+            padding: 0
+            margin: 0
+            width: 24px
+            height: 24px
+            margin-left: 12px
+            margin-right: 12px
+            button
+                text-indent: -9999px
+                width: 24px
+                height: 24px
+                border: 0
+                border-radius: 50%
+                background-color: #3679a9
+                border: 1px solid #3679a9
+            &.slick-active
+                button
+                    border-color: #fff
+                    background-color: #86c242
+
+    .slick-arrow
+        width: 9px + 16px
+        height: 15px + 16px
+        position: absolute
+        top: 50%
+        margin-top: -15px
+        border: 0
+        background: transparent
+        padding: 8px
+        cursor: pointer
+        right: 26px
+        z-index: 10
+        svg
+            position: absolute
+            top: 8px
+            left: 8px
+            width: 9px
+            height: 15px
+            transition: .3s ease
+            path
+                transition: .3s ease
+                fill: #fff
+        &:hover
+            svg
+                transition: .3s ease
+                path
+                    transition: .3s ease
+                    fill: #86c242
+        &.slick-prev
+            right: auto
+            left: 26px
+            svg
+                transform: rotate(180deg)
+
+
+
+
+.row.is-flex
+    display: flex
+    flex-wrap: wrap
+
+.row.is-flex > [class*='col-']
+    display: flex
+    flex-direction: column
+
+.row.is-flex
+    display: flex
+    flex-wrap: wrap
+
+.row.is-flex > [class*='col-']
+    display: flex
+    flex-direction: column
+
+
+.pansion-card
+    border-radius: 4px
+    overflow: hidden
+    background-color: #fff
+    padding-bottom: 25px
+    margin-bottom: 20px
+    display: block
+    text-decoration: none !important
+    transition: .3s ease
+    &:hover
+        box-shadow: 0px 5px 10px 0px rgba(171, 171, 171, 0.15)
+    &__img
+        img
+            width: 100%
+            height: auto
+
+    &__title
+        margin-top: 20px
+        color: #656565 !important
+        font-size: 24px
+        padding-left: 30px
+        padding-right: 30px
+
+    
