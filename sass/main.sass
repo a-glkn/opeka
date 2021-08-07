@@ -176,4 +176,27 @@
 			line-height: 1.666
 
 
+.section_route
+	position: relative
+	.map
+		position: absolute
+		width: 50%
+		height: 100%
+		right: 0
+		top: 0
+
+	.route-text
+		position: relative
+		&:after
+			content: ''
+			display: block
+			width: 300px
+			height: 100%
+			position: absolute
+			right: -285px
+			top: 0
+			z-index: 10
+			background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 33.3%, rgba(204,192,0,0) 100%)
+
+
 @import "media" // Always at the end
