@@ -1,5 +1,24 @@
 $(function() {
 
+	$('.toggle-block__header').on( "click", function( event ) {
+		
+		var block = $(this).parents('.toggle-block');
+
+		$(block).toggleClass('active');
+
+	});
+
+	$('.section_central-intro .mouse-down').on( "click", function( event ) {
+		
+		$('html, body').animate({
+			scrollTop: $('#edu-content').offset().top 
+		}, 600);
+	
+
+	});
+
+	
+
 	$('.faq__item').on( "click", function( event ) {
 		$(this).toggleClass('active');
 	});

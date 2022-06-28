@@ -1684,7 +1684,21 @@
         </g>
     </symbol>
 
+    <symbol viewBox="0 0 44 44" fill="none" id="mouse">
+        <path d="M25.6667 5.5H18.3333C14.2832 5.5 11 8.78325 11 12.8333V31.1667C11 35.2168 14.2832 38.5 18.3333 38.5H25.6667C29.7168 38.5 33 35.2168 33 31.1667V12.8333C33 8.78325 29.7168 5.5 25.6667 5.5Z" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 12.8335V20.1668" stroke="white" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 
+
+    <symbol viewBox="0 0 44 44" fill="none" id="arrow-toggler">
+        <path d="M29.3334 25.3335L22.0001 18.0002L14.6667 25.3335" stroke="#076197" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol viewBox="0 0 44 44" fill="none" id="link">
+        <path d="M22 5.5C12.8873 5.5 5.5 12.8873 5.5 22C5.5 31.1127 12.8873 38.5 22 38.5C31.1127 38.5 38.5 31.1127 38.5 22C38.5 12.8873 31.1127 5.5 22 5.5Z" stroke="#91BF29" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.5 27.5L27.5 16.5" stroke="#91BF29" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.5 16.5L27.5 16.5L27.5 27.5" stroke="#91BF29" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 
 
 </svg>
