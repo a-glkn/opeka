@@ -195,6 +195,31 @@
     .border-block
         padding: 20px
 
+
+    .section_central-intro
+        padding-top: 150px
+        padding-bottom: 200px
+        text-align: center
+        position: relative
+        .mouse-down
+            bottom: 20px
+
+
+    .toggle-block
+        &__header
+            padding-top: 20px
+            padding-bottom: 20px
+            padding-left: 20px
+            padding-right: 54px
+            font-size: 24px
+        &__toggler
+            right: 10px
+            top: 10px
+        &__text
+            padding-left: 20px
+            padding-right: 20px
+            font-size: 18px
+
 @media (max-width: 767px)
     .section_job 
         p
@@ -351,3 +376,24 @@
 
     .card-direction__title
         font-size: 20px
+
+
+    .toggle-block
+        &__header
+            padding-top: 15px
+            padding-bottom: 15px
+            padding-left: 15px
+            padding-right: 54px
+            font-size: 20px
+        &__toggler
+            right: 10px
+            top: 10px
+        &__text
+            padding-left: 15px
+            padding-right: 15px
+            font-size: 16px
+            &_row
+                .toggle-block__col
+                    width: 40%
+                    &:last-child
+                        width: 60%
