@@ -274,6 +274,22 @@ a.text-blue
     &.btn_bd-blue
         border: 1px solid #cbe4ef
 
+    &_dark-blue
+        background-color: #076197
+        color: #fff
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        padding-top: 16px
+        padding-bottom: 16px
+        padding-left: 30px
+        padding-right: 30px
+        min-width: 230px
+        transition: .3s ease
+        &:hover
+            background-color: #91BF29
+
 a.btn
     text-decoration: none
     display: inline-block
@@ -1405,6 +1421,30 @@ a.btn_size-h-48
         color: #656565
     &__val
         color: #056697
+        &_top-text
+            position: relative
+            padding-top: 20.36px
+            span
+                position: absolute
+                top: -10px
+                left: 0
+                font-style: normal
+                font-weight: 500
+                font-size: 25.6px
+                line-height: 32px
+                color: #303844
+                &:before
+                    position: absolute
+                    top: 15px
+                    left: -6px
+                    content: ''
+                    display: block
+                    width: 96px
+                    height: 3.2px
+                    background: #FE8585
+                    transform: rotate(-15deg)
+
+
     &__elem
         padding-right: 24px
         padding-left: 24px
@@ -1415,7 +1455,17 @@ a.btn_size-h-48
         
         &:last-child
             border-right: 0
+
+    &__bottom-text
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #303844
+
+
          
+
 
 
 
@@ -2220,3 +2270,95 @@ a.btn_size-h-48
 
     &:hover
         text-decoration: underline !important
+
+
+
+
+.form-first
+    display: flex
+    &__input
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        color: #666B71
+        width: 255px
+        padding: 16px
+        background: #FFFFFF
+        border: 1px solid #D7F0FF
+        border-radius: 6px
+
+    &__btn
+        padding: 16px 10px
+        background: #076197
+        border-radius: 6px
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #FFFFFF
+        border: 0
+        width: 231px
+        margin-left: -10px
+        transition: .3s ease
+        &:hover
+            background-color: #91BF29
+
+
+
+
+.insult-block
+    display: flex
+    background: #F2F7FA
+    border-radius: 6px
+    padding-left: 30px
+    padding-right: 30px
+    padding-top: 60px
+    margin-bottom: 15px
+    padding-bottom: 60px
+    &__icon
+        width: 113px
+        height: 113px
+        min-width: 113px
+        display: flex
+        border-radius: 50%
+        background-color: #fff
+        svg
+            margin: auto
+    &__content
+        padding-left: 30px
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 140%
+        color: #666B71
+
+    &__price
+        margin-top: 6px
+        font-style: normal
+        font-weight: 500
+        font-size: 32px
+        line-height: 140%
+        color: #303844
+
+
+.text-c-block
+    padding-top: 0
+    margin-bottom: 60px
+    border-top: 10px solid #A4DDFF
+    p
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 140%
+        color: #666B71
+
+    &_2
+        border-color: #91BF29
+
+    &_3
+        border-color: #076197
+    &_4
+        border-color: #D7F0FF
+
