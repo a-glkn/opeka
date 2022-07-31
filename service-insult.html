@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Опека</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+
+	<!-- Шрифт скопирован с сайта -->
+	<style type="text/css">
+		@font-face { 
+			font-family: 'core_sans_ds35_regular'; src: url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.eot'); src: url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.woff2') format('woff2'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.woff') format('woff'), url('fonts/core_sans_ds_35_regular/core_sans_ds_35_regular-webfont.ttf') format('truetype'); font-weight: normal; font-style: normal;
+		}
+	</style>
+
+
+	<!-- стили с сайта, ресет+сетка -->
+	<style type="text/css">hr,img,legend{border:0}legend,td,th{padding:0}body,figure{margin:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;color:#337ab7;text-decoration:none}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}.img-thumbnail,body{background-color:#fff}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{vertical-align:middle}svg:not(:root){overflow:hidden}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-size:14px;line-height:1.42857143;color:#333}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}.container,.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}[role=button]{cursor:pointer}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.row{margin-left:-15px;margin-right:-15px}.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{content:" ";display:table}.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.affix{position:fixed}@-ms-viewport{width:device-width}@media (max-width:767px){.visible-xs{display:block!important}table.visible-xs{display:table!important}tr.visible-xs{display:table-row!important}td.visible-xs,th.visible-xs{display:table-cell!important}.visible-xs-block{display:block!important}.visible-xs-inline{display:inline!important}.visible-xs-inline-block{display:inline-block!important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block!important}table.visible-sm{display:table!important}tr.visible-sm{display:table-row!important}td.visible-sm,th.visible-sm{display:table-cell!important}.visible-sm-block{display:block!important}.visible-sm-inline{display:inline!important}.visible-sm-inline-block{display:inline-block!important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block!important}table.visible-md{display:table!important}tr.visible-md{display:table-row!important}td.visible-md,th.visible-md{display:table-cell!important}.visible-md-block{display:block!important}.visible-md-inline{display:inline!important}.visible-md-inline-block{display:inline-block!important}}@media (min-width:1200px){.visible-lg{display:block!important}table.visible-lg{display:table!important}tr.visible-lg{display:table-row!important}td.visible-lg,th.visible-lg{display:table-cell!important}.visible-lg-block{display:block!important}.visible-lg-inline{display:inline!important}.visible-lg-inline-block{display:inline-block!important}.hidden-lg{display:none!important}}@media (max-width:767px){.hidden-xs{display:none!important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none!important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none!important}}.visible-print{display:none!important}@media print{.visible-print{display:block!important}table.visible-print{display:table!important}tr.visible-print{display:table-row!important}td.visible-print,th.visible-print{display:table-cell!important}}.visible-print-block{display:none!important}@media print{.visible-print-block{display:block!important}}.visible-print-inline{display:none!important}@media print{.visible-print-inline{display:inline!important}}.visible-print-inline-block{display:none!important}@media print{.visible-print-inline-block{display:inline-block!important}.hidden-print{display:none!important}}</style>
+
+
+	<!-- Глобально прописал шрифт, на сайте он итак прописан глобально  -->
+	<style>
+		body{
+			font-family: core_sans_ds35_regular;
+		}
+
+	</style>
+
+	<!-- Стиль кастомного чекбокса, выдернут из текущих стилей сайта   -->
+	<style>
+		label.checkbox-blue{ width: 100%; cursor: pointer;}label.checkbox-blue input[type=checkbox]{ display: none;}label.checkbox-blue span{ position: relative; padding-left: 30px;}label.checkbox-blue span:before{ content: ''; width: 22px; height: 22px; display: block; position: absolute; left: 0px; top: -2px; border: 1px solid #d1e3ee; -webkit-border-radius: 6px; border-radius: 6px; background: none; -webkit-transition: all 0.4s ease 0s; -moz-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s;}label.checkbox-blue:hover span:before { border-color: #8ab4cf;}label.checkbox-blue input[type=checkbox]:checked + span:before{ background: #8ab4cf; border: 1px solid #8ab4cf;}label.checkbox-blue input[type=checkbox]:checked + span:after{ content: ''; width: 6px; height: 9px; border: 2px solid white; border-left: 0; border-top: 0; display: block; position: absolute; left: 8px; top: 3px; -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
+	</style>
+
+
+
+	<!-- Базовые стили Slick-слайдера, на сайте они уже подключены -->
+	<style>
+		/* Slider */
+		.slick-slider
+		{
+			position: relative;
+
+			display: block;
+			box-sizing: border-box;
+
+			-webkit-user-select: none;
+			-moz-user-select: none;
+				-ms-user-select: none;
+					user-select: none;
+
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+				touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		.slick-list
+		{
+			position: relative;
+
+			display: block;
+			overflow: hidden;
+
+			margin: 0;
+			padding: 0;
+		}
+		.slick-list:focus
+		{
+			outline: none;
+		}
+		.slick-list.dragging
+		{
+			cursor: pointer;
+			cursor: hand;
+		}
+
+		.slick-slider .slick-track,
+		.slick-slider .slick-list
+		{
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+				-ms-transform: translate3d(0, 0, 0);
+				-o-transform: translate3d(0, 0, 0);
+					transform: translate3d(0, 0, 0);
+		}
+
+		.slick-track
+		{
+			position: relative;
+			top: 0;
+			left: 0;
+
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.slick-track:before,
+		.slick-track:after
+		{
+			display: table;
+
+			content: '';
+		}
+		.slick-track:after
+		{
+			clear: both;
+		}
+		.slick-loading .slick-track
+		{
+			visibility: hidden;
+		}
+
+		.slick-slide
+		{
+			display: none;
+			float: left;
+
+			height: 100%;
+			min-height: 1px;
+		}
+		[dir='rtl'] .slick-slide
+		{
+			float: right;
+		}
+		.slick-slide img
+		{
+			display: block;
+		}
+		.slick-slide.slick-loading img
+		{
+			display: none;
+		}
+		.slick-slide.dragging img
+		{
+			pointer-events: none;
+		}
+		.slick-initialized .slick-slide
+		{
+			display: block;
+		}
+		.slick-loading .slick-slide
+		{
+			visibility: hidden;
+		}
+		.slick-vertical .slick-slide
+		{
+			display: block;
+
+			height: auto;
+
+			border: 1px solid transparent;
+		}
+		.slick-arrow.slick-hidden {
+			display: none;
+		}
+	</style>
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<section class="section section_first section_first-insult bg-cover pt pb" style="background-image: url(img/insult.jpg);">
+		<div class="container pt pb">
+
+			<div class="row pt pb">
+				<div class="col-md-7">
+					
+					<div class="heading heading_xmd">Адаптационная программа
+						для пациентов, перенесших инсульт</div>
+					
+					<div class="duration mt-2">
+						<div class="duration__elem">
+							<div class="duration__val duration__val_top-text heading heading_md">
+								от 200 000 руб.
+								<span>260 000</span>
+							</div>
+
+							<div class="duration__bottom-text">
+								(при проживании в 3 – 4 местном номере)
+							</div>
+						</div>
+
+						<div class="duration__elem">
+							<div class="duration__label">продолжительность:</div>
+							<div class="duration__val heading heading_md">30 дней</div>
+						</div>
+					</div>
+
+
+					<form action="#" class="form-first">
+						<input placeholder="+7 (___) ___-__-__" type="text" class="form-first__input">
+						<button class="form-first__btn">Заказать</button>
+					</form>
+
+					<div class="heading heading_sm mt-2 fs-i text-grey">*Стоимость программы зависит от тяжести состояния пациента</div>
+			
+				</div>
+			</div>
+			
+		</div>
+	</section>
+
+	<section class="section bg-blue pt">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading heading_lg mb-1">Ваш близкий столкнулся с инсультом? Мы вам поможем!</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="text-c-block text-c-block_1">
+						<p>Зачастую инсульт (острое нарушение мозгового кровоснабжения) происходит у людей старшего возраста, которые уже имеют в своем «багаже» ряд заболеваний сердечно-сосудистой, дыхательной и опорно-двигательной систем. И в связи с этим они не имеют возможности пройти курс полноценной программы реабилитации.</p>
+
+						<p>Однако, не следует забывать, что если человека нельзя полностью вылечить, то ему и нельзя помочь.</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="text-c-block text-c-block_2">
+						<p>Наш курс восстановительного, адаптационного лечения разработан именно для группы возрастных пациентов со сниженным реабилитационным потенциалом и
+							направлен на адаптацию к развившемуся в результате инсульта неврологическому
+							дефициту и профилактику дальнейших осложнений этого патологического состояния,
+							таких как тромбозы вен, пневмонии, контрактуры суставов в пораженных конечностях и
+							повторные инсульты.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="text-c-block text-c-block_3">
+						<p>Научно доказано, что отсутствие профилактики у 20% пациентов в течение первого года после первичного инсульта приводит к повторному возникновению заболевания.</p>
+
+						<p>Самостоятельно, в домашних условиях, пациенту после выписки из стационара заниматься восстановительными процедурами достаточно сложно. Поэтому наши программы должны решить эту проблему как для пациента, так и для его родственника. Помимо медицинской адаптации, у пациента проводится и оценка психофизиологического состояния. Меры психологической и социальной реабилитации направлены на адаптацию пожилого человека в новых условиях.</p>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="text-c-block text-c-block_4">
+						<p>За время проведения проведения адаптационной программы мы можем предоставить определенную медицинскую помощь пациенту и научить его способам восстановления в домашних условиях. При этом пациент может возвращаться к нам на повторные краткосрочные курсы для закрепления полученного результата и снижения риска повторных атак заболевания.</p>
+
+						<p>Все используемые методы в программе имеют доказанную эффективность.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section pt pb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading heading_lg">Программа восстановления после инсульта</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-responsive">
+						<table class="table">
+							<tr>
+								<th width="92">№ п/п</th>
+								<th>Наименование услуги</th>
+								<th>Количество</th>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td>Осмотр врача терапевта (плюс наблюдение медсестры)</td>
+								<td>не менее двух раз за курс</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>Осмотр врача невролога</td>
+								<td>не менее раза раз за курс</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>Осмотр врача ЛФК</td>
+								<td>не менее двух раз за курс</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>УЗДГ вен н\к</td>
+								<td>при поступлении, либо предоставить
+									амбулаторное заключение</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td>Забор крови</td>
+								<td>1</td>
+							</tr>
+
+							<tr>
+								<td>6</td>
+								<td>Клинический анализ крови, СОЭ</td>
+								<td>1</td>
+							</tr>
+
+							<tr>
+								<td>7</td>
+								<td>Общий анализ мочи</td>
+								<td>1</td>
+							</tr>
+
+							<tr>
+								<td>8</td>
+								<td>Биохимический анализ крови
+									(С-
+									реактивный белок, АЛТ, АСТ, щелочная
+									фосфатаза, билирубин общий, ГГТ, 
+									креатинин, мочевина, общий белок, Д-димер, АЧТВ, тромбиновое время, МНО)</td>
+								<td>1</td>
+							</tr>
+
+							<tr>
+								<td>9</td>
+								<td>Консультация логопеда</td>
+								<td>не менее одного раза</td>
+							</tr>
+
+							<tr>
+								<td>10</td>
+								<td>В/м инъекция</td>
+								<td>не менее 10 за курс</td>
+							</tr>
+
+							<tr>
+								<td>11</td>
+								<td>В/в капельное вливание</td>
+								<td>не менее 10 за курс</td>
+							</tr>
+
+							<tr>
+								<td>12</td>
+								<td>Массаж одной зоны</td>
+								<td>процедур всего 15 по зонам
+									(пораженная рука, нога, иное)</td>
+							</tr>
+
+							<tr>
+								<td>13</td>
+								<td>Консультация инструктора ЛФК</td>
+								<td>2</td>
+							</tr>
+
+							<tr>
+								<td>14</td>
+								<td>ЛФК</td>
+								<td>15</td>
+							</tr>
+
+							<tr>
+								<td>15</td>
+								<td>Перевязка</td>
+								<td>по показаниям</td>
+							</tr>
+
+							<tr>
+								<td>16</td>
+								<td>Профилактическая обработка против
+									пролежней</td>
+								<td>ежедневно</td>
+							</tr>
+
+							<tr>
+								<td>17</td>
+								<td>Психолог</td>
+								<td>не менее одной консультации при поступлении</td>
+							</tr>
+
+							<tr>
+								<td>18</td>
+								<td>Проживание в 3 – 4-х местном номере</td>
+								<td>30 дней</td>
+							</tr>
+						</table>
+					</div>
+
+					<button class="btn btn_dark-blue">Заказать</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section pt pb">
+		
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="heading heading_lg mb-1">Восстановление после инсульта в пансионатах Опека</div>
+				</div>
+			</div>
+			
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="insult-block">
+						<div class="insult-block__icon">
+							<svg width="56" height="70" class="icon">
+								<use xlink:href="img/sprite.svg#man-2"></use>
+							</svg>
+						</div>
+						<div class="insult-block__content">
+							<div class="insult-block__text">при размещении в 2-х местном номере доплата составит </div>
+							<div class="insult-block__price">1 000 руб/сутки</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="insult-block">
+						<div class="insult-block__icon">
+							<svg width="83" height="83"  class="icon">
+								<use xlink:href="img/sprite.svg#bedroom"></use>
+							</svg>
+						</div>
+						<div class="insult-block__content">
+							<div class="insult-block__text">при размещении в 1-но местном номере доплата составит</div>
+							<div class="insult-block__price">1 700 руб/сутки</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	
+	</section>
+
+	<section class="section section_capture pt pb">
+		<div class="container">
+
+			<div class="row">
+				
+				<div class="col-lg-12">
+
+					<div class="heading heading_md mb-1">Оставте ваши данные, либо свяжитесь с нами: <a href="tel:78005555403">+7 (800) 555 54 03</a></div>
+
+					<div class="form-wrapper">
+						<form class="form">
+							<input type="text" class="form__input" placeholder="Фамилия, имя и отчество*">
+
+							<div class="row">
+								<div class="col-lg-6">
+									<input type="text" class="form__input" placeholder="Телефон">
+								</div>
+								<div class="col-lg-6">
+									<input type="text" class="form__input" placeholder="E-mail">
+								</div>
+							</div>
+
+							<label class="form__label checkbox-blue pp_wrapper">
+								<input type="checkbox" checked="checked" name="pp">
+								<span>Cогласен с <a href="/politika-konfidentsialnosti/" target="_blank">политикой конфиденциальности</a></span>
+							</label>
+
+							<div class="mt-1">
+								<button class="btn mb-0 btn_outlined btn_size-h-48">Отправить</button>
+							</div>
+						</form>
+					</div>
+				
+				</div>
+			</div>
+			
+
+		</div>
+	</section>
+
+
+	<!-- jquery с CDN -->
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+
+	<!-- Slick-слайдер с сайта -->
+	<script src="https://sgc-opeca.ru/local/templates/opeca/js/slick.min.js"></script>
+
+	<script src="js/scripts.min.js?v=2"></script>
+</body>
+</html>
