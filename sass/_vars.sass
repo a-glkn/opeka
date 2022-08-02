@@ -2362,3 +2362,50 @@ a.btn_size-h-48
     &_4
         border-color: #D7F0FF
 
+
+.row-text-slider
+    .slick-slide
+        width: 300px !important
+
+.js-collapse
+    position: relative
+    .table-responsive
+        margin: 0
+    .js-collapse__body
+        overflow-y: hidden
+        position: relative
+        margin: 2em 0
+        &:after
+            content: ''
+            height: 146px
+            bottom: 0
+            left: 0
+            width: 100%
+            position: absolute
+            background: linear-gradient(180deg, rgba(215, 240, 255, 0) 0%, rgba(216, 240, 255, 0.0260417) 0.01%, #F2FAFF 100%)
+    .js-collapse__action
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #666B71
+        padding: 16px 27.5px
+        background: #D7F0FF
+        border-radius: 6px
+        display: inline-block
+        cursor: pointer
+        position: absolute
+        bottom: 32px
+        left: 32px
+
+    &.collapsed
+        .js-collapse__body
+            height: auto !important
+            &:after
+                display: none
+
+        .js-collapse__action
+            display: none
+
+
+
