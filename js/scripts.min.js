@@ -1,5 +1,36 @@
 $(function() {
 
+	$('.row-text-slider').slick({
+		dots: false,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		accessibility: false,
+		mobileFirst: true, 
+		variableWidth: true,
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: "unslick"
+			}
+		]
+	});
+
+	$('.js-collapse').each(function(i, el) {
+		var h = $(this).data('height') ? $(this).data('height') : 400;
+
+		$('.js-collapse__body', this).css('height', h);
+	});
+
+
+	$('.js-collapse__action').on( "click", function( event ) {
+		var cont = $(this).parents('.js-collapse');
+
+		$(cont).addClass('collapsed');
+	});
+
+
 	$('.toggle-block__header').on( "click", function( event ) {
 		
 		var block = $(this).parents('.toggle-block');

@@ -413,6 +413,52 @@
     .text-c-block
         p
             font-size: 18px
+
+    
+@media (max-width: 767px)
+    .table-mobile
+        .table
+            tr:first-child
+                th
+                    padding-left: 10px
+                    padding-right: 10px
+                    display: none
+                    width: 100%
+                    &:first-child
+                        display: block
+
+            tr
+                td
+                    padding-left: 10px
+                    padding-right: 10px
+                    display: block
+
+
+    .table-insult
+        tr
+            td:nth-child(1)
+                margin-bottom: -48px
+            td:nth-child(2)
+                padding-left: 70px
+                &:before
+                    content: 'Наименование услуги'
+                    display: block
+                    color: #076197
+                    font-weight: 500
+
+            td:nth-child(3)
+                padding-left: 70px
+                &:before
+                    content: 'Количество'
+                    display: block
+                    color: #076197
+                    font-weight: 500
+
+            td:first-child
+                border-bottom: 0
+            td:nth-child(2)
+                border-bottom: 0
+                
 @media (max-width: 480px)
     .form
         &__line
