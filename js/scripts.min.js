@@ -2,19 +2,19 @@ $(function() {
 
 	$('.row-text-slider').slick({
 		dots: false,
-		infinite: true,
+		infinite: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		accessibility: false,
-		mobileFirst: true, 
+		// mobileFirst: true, 
 		variableWidth: true,
 		arrows: false,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: "unslick"
-			}
-		]
+		// responsive: [
+		// 	{
+		// 		breakpoint: 768,
+		// 		settings: "unslick"
+		// 	}
+		// ]
 	});
 
 	$('.js-collapse').each(function(i, el) {
